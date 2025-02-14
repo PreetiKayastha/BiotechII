@@ -1,0 +1,54 @@
+---
+title: "activity"
+author: "Preeti"
+date: "2025-02-13"
+output:
+  word_document: default
+  html_document:
+    df_print: paged
+---
+# 1. Summary of cars data
+```{r}
+summary(cars)
+
+```
+
+# 2. Plot showing cars data 
+```{r fig.width=10, fig.height=5, fig.cap= "Updated car plot"}
+plot(cars)
+```
+
+# 3. Summary showing iris data
+```{r}
+summary(iris)
+```
+
+# 4. summary showing life cycle savings data
+``` {r}
+summary(LifeCycleSavings)
+```
+
+#5. Plot showing mpg data
+```{r fig.width=10, fig.height=5, fig.cap= "Car types under different years and drive trains"}
+library(ggplot2)
+ggplot(mpg) + 
+    geom_bar(aes(y = class, fill = class)) + 
+    facet_grid(year ~ drv) +
+    scale_fill_hue() +
+    labs( x = "Number of cars",
+          y = "Class of cars",
+          title = "Car types under different years and drive trains") +
+    coord_fixed(4) +
+    theme_light() +
+    theme(
+      legend.position = "none",
+      axis.line = element_line(linewidth = 0.75),
+      axis.line.x.bottom = element_line(colour = "grey"),
+      axis.line.y.left = element_line(colour = "grey"),
+      axis.title = element_text(size = 10),
+      axis.text = element_text(size = 10),
+      panel.grid.major = element_blank(),
+      panel.grid.minor = element_blank()
+    )
+```
+
