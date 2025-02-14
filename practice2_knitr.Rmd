@@ -1,0 +1,84 @@
+---
+title: "practice2"
+author: "Preeti"
+date: "2025-02-13"
+output: html_document
+---
+
+```{r}
+summary(cars)
+summary(iris)
+
+```
+
+```{r, echo=FALSE}
+summary(cars)
+print(cars)
+
+```
+
+``` {r eval=TRUE}
+print("This will be printed")
+```
+
+``` {r eval=FALSE}
+print("This will not be printed")
+```
+
+```{r include=TRUE}
+print("This will be printed")
+```
+
+```{r include=FALSE}
+print("This will not be printed")
+```
+
+```{r warning=TRUE}
+log(-1)
+```
+
+```{r warning=FALSE}
+log(-1)
+```
+
+```{r fig.width=8, fig.height=6}
+plot(cars)
+```
+
+```{r fig.cap="Scatter plot of cars data"}
+plot(cars)
+```
+
+```{r fig.width=10, fig.height=5, fig.cap= "Updated car plot"}
+plot(cars)
+```
+
+
+```{r}
+summary(iris)
+```
+
+``` {r}
+library(lifecycle)
+summary(LifeCycleSavings)
+```
+
+```{r}
+library(ggplot2)
+ggplot(mpg,aes(x = "", fill = class)) +
+   geom_bar (width = 1) + 
+   facet_grid(year ~ drv) +
+   scale_fill_hue() +
+   coord_polar(theta = "y") +
+  theme_light() +
+   theme(
+     legend.position = "bottom",
+     axis.line = element_line(linewidth = 0.75),
+     axis.line.x.bottom = element_line(colour = "grey"),
+     axis.line.y.left = element_line(colour = "grey"),
+     axis.title = element_text(size = 10),
+     axis.text = element_text(size = 10),
+     panel.grid.major = element_blank(),
+     panel.grid.minor = element_blank())
+```
+
