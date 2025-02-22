@@ -1,0 +1,40 @@
+  GNU nano 7.2                                                          sum_drosophila.sh#!/bin/bash
+
+# Get the total count of flies from two data files
+flies1=$(awk '{sum += $1} END {print sum}' "$1")
+flies2=$(awk '{sum += $1} END {print sum}' "$2")
+
+echo "Drosophila count in $1: $flies1"
+echo "Drosophila count in $2: $flies2"
+
+# Calculate the total flies from both files
+total_flies=$((flies1 + flies2))
+
+echo "Total Drosophila count: $total_flies"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                     [ Read 13 lines ]
+^G Help          ^O Write Out     ^W Where Is      ^K Cut           ^T Execute       ^C Location      M-U Undo         M-A Set Mark     M-] To Bracket
+^X Exit          ^R Read File     ^\ Replace       ^U Paste         ^J Justify       ^/ Go To Line    M-E Redo         M-6 Copy         ^Q Where Was

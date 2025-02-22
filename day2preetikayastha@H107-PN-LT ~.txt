@@ -1,0 +1,107 @@
+Welcome to Ubuntu 24.04.1 LTS (GNU/Linux 5.15.167.4-microsoft-standard-WSL2 x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Thu Feb 20 17:34:39 EST 2025
+
+  System load:  0.8                 Processes:             71
+  Usage of /:   8.1% of 1006.85GB   Users logged in:       0
+  Memory usage: 5%                  IPv4 address for eth0: 172.19.101.33
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+This message is shown once a day. To disable it please create the
+(base) preetikayastha@H107-PN-LT:~$ ls
+Cucurmin                                          index.html.1
+Drosophila_melanogaster.BDGP6.46.113.gtf          miniconda3
+Drosophila_melanogaster.BDGP6.46.dna.toplevel.fa  ncbi
+Drospepper                                        new_name.txt
+SRR20313491                                       path
+SRR20313492                                       pk
+ht-seqrunDros.sh                                  practice_folder
+index.html                                        test.sh
+(base) preetikayastha@H107-PN-LT:~$ nano test.sh
+(base) preetikayastha@H107-PN-LT:~$ bash test.sh
+Hello, World!
+(base) preetikayastha@H107-PN-LT:~$ nano activity.sh
+(base) preetikayastha@H107-PN-LT:~$ ls
+Cucurmin                                          index.html.1
+Drosophila_melanogaster.BDGP6.46.113.gtf          miniconda3
+Drosophila_melanogaster.BDGP6.46.dna.toplevel.fa  ncbi
+Drospepper                                        new_name.txt
+SRR20313491                                       path
+SRR20313492                                       pk
+activity.sh                                       practice_folder
+ht-seqrunDros.sh                                  test.sh
+index.html
+(base) preetikayastha@H107-PN-LT:~$ pwd
+/home/preetikayastha
+(base) preetikayastha@H107-PN-LT:~$ nano activity.sh
+
+
+(base) preetikayastha@H107-PN-LT:~$ bash activity.sh
+(base) preetikayastha@H107-PN-LT:~$ ls
+Cucurmin                                          Drospepper   activity.sh         index.html    ncbi             path             test.sh
+Drosophila_melanogaster.BDGP6.46.113.gtf          SRR20313491  activity_directory  index.html.1  new_name.txt     pk
+Drosophila_melanogaster.BDGP6.46.dna.toplevel.fa  SRR20313492  ht-seqrunDros.sh    miniconda3    newtextfile.ext  practice_folder
+(base) preetikayastha@H107-PN-LT:~$ nano activity.sh
+(base) preetikayastha@H107-PN-LT:~$ ls
+ test.sh
+Drosophila_melanogaster.BDGP6.46.113.gtf          SRR20313491  activity_directory  index.html.1  new_name.txt     pk
+Drosophila_melanogaster.BDGP6.46.dna.toplevel.fa  SRR20313492  ht-seqrunDros.sh    miniconda3    newtextfile.ext  practice_folder
+(base) preetikayastha@H107-PN-LT:~$ nano activity.sh
+(base) preetikayastha@H107-PN-LT:~$ bash activity.sh
+mkdir: cannot create directory ‘activity_directory’: File exists
+(base) preetikayastha@H107-PN-LT:~$ nano activity.sh
+(base) preetikayastha@H107-PN-LT:~$ bash activity.sh
+mkdir: cannot create directory ‘activity_directory’: File exists
+(base) preetikayastha@H107-PN-LT:~$ nano activity.sh
+(base) preetikayastha@H107-PN-LT:~$ bash activity.sh
+(base) preetikayastha@H107-PN-LT:~$ ls
+Cucurmin                                          Drospepper   activity.sh          ht-seqrunDros.sh  miniconda3    newtextfile.ext  practice_folder
+Drosophila_melanogaster.BDGP6.46.113.gtf          SRR20313491  activity2_directory  index.html        ncbi          path             test.sh
+Drosophila_melanogaster.BDGP6.46.dna.toplevel.fa  SRR20313492  activity_directory   index.html.1      new_name.txt  pk
+(base) preetikayastha@H107-PN-LT:~$ cd activity2_directory
+(base) preetikayastha@H107-PN-LT:~/activity2_directory$ ls
+newtextfile.txt
+(base) preetikayastha@H107-PN-LT:~/activity2_directory$ nano newtextfile.txt
+(base) preetikayastha@H107-PN-LT:~/activity2_directory$ ls
+newtextfile.txt
+(base) preetikayastha@H107-PN-LT:~/activity2_directory$ cd newtextfile.txt
+-bash: cd: newtextfile.txt: Not a directory
+(base) preetikayastha@H107-PN-LT:~/activity2_directory$ ls -l
+total 4
+-rw-r--r-- 1 preetikayastha preetikayastha 31 Feb 20 18:03 newtextfile.txt
+(base) preetikayastha@H107-PN-LT:~/activity2_directory$ bash newtextfile.txt
+It's okay
+(base) preetikayastha@H107-PN-LT:~/activity2_directory$ nano activity.sh
+(base) preetikayastha@H107-PN-LT:~/activity2_directory$ nano activity.sh
+(base) preetikayastha@H107-PN-LT:~/activity2_directory$ nano activity.sh
+(base) preetikayastha@H107-PN-LT:~/activity2_directory$ cd ..
+(base) preetikayastha@H107-PN-LT:~$ ls
+Cucurmin                                          Drospepper   activity.sh          ht-seqrunDros.sh  miniconda3    newtextfile.ext  practice_folder
+Drosophila_melanogaster.BDGP6.46.113.gtf          SRR20313491  activity2_directory  index.html        ncbi          path             test.sh
+Drosophila_melanogaster.BDGP6.46.dna.toplevel.fa  SRR20313492  activity_directory   index.html.1      new_name.txt  pk
+(base) preetikayastha@H107-PN-LT:~$ nano activity.sh
+(base) preetikayastha@H107-PN-LT:~$ nano test.sh
+(base) preetikayastha@H107-PN-LT:~$ ls
+Cucurmin                                          index.html.1
+Drosophila_melanogaster.BDGP6.46.113.gtf          miniconda3
+Drosophila_melanogaster.BDGP6.46.dna.toplevel.fa  ncbi
+Drospepper                                        new_name.txt
+SRR20313491                                       newtextfile.ext
+SRR20313492                                       ntestfile.sh
+activity.sh                                       ntestfilefinal.sh
+activity2_directory                               path
+activity_directory                                pk
+ht-seqrunDros.sh                                  practice_folder
+index.html                                        test.sh
+(base) preetikayastha@H107-PN-LT:~$ bash ntestfilefinal.sh
+Hello, World!
+(base) preetikayastha@H107-PN-LT:~$

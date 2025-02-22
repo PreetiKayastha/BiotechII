@@ -1,0 +1,46 @@
+(base) preetikayastha@H107-PN-LT:~$ ls
+Cucurmin                                          SRR20313492          index.html    newtextfile.ext    practice_folder
+Drosophila_melanogaster.BDGP6.46.113.gtf          activity.sh          index.html.1  ntestfile.sh       test.sh
+Drosophila_melanogaster.BDGP6.46.dna.toplevel.fa  activity2_directory  miniconda3    ntestfilefinal.sh
+Drospepper                                        activity_directory   ncbi          path
+SRR20313491                                       ht-seqrunDros.sh     new_name.txt  pk
+(base) preetikayastha@H107-PN-LT:~$ nano drosophila_maths.sh
+(base) preetikayastha@H107-PN-LT:~$ bash drosophila_maths.sh
+
+^[[A^[[A^[[A^[[A^Z
+[1]+  Stopped                 bash drosophila_maths.sh
+(base) preetikayastha@H107-PN-LT:~$ ls
+Cucurmin                                          SRR20313491          activity_directory   index.html.1  newtextfile.ext    pk
+Drosophila_melanogaster.BDGP6.46.113.gtf          SRR20313492          drosophila_maths.sh  miniconda3    ntestfile.sh       practice_folder
+Drosophila_melanogaster.BDGP6.46.dna.toplevel.fa  activity.sh          ht-seqrunDros.sh     ncbi          ntestfilefinal.sh  test.sh
+Drospepper                                        activity2_directory  index.html           new_name.txt  path
+(base) preetikayastha@H107-PN-LT:~$ ls
+Cucurmin                                          SRR20313491          activity_directory   index.html.1  newtextfile.ext    pk
+Drosophila_melanogaster.BDGP6.46.113.gtf          SRR20313492          drosophila_maths.sh  miniconda3    ntestfile.sh       practice_folder
+Drosophila_melanogaster.BDGP6.46.dna.toplevel.fa  activity.sh          ht-seqrunDros.sh     ncbi          ntestfilefinal.sh  test.sh
+Drospepper                                        activity2_directory  index.html           new_name.txt  path
+(base) preetikayastha@H107-PN-LT:~$ nano ^C
+(base) preetikayastha@H107-PN-LT:~$ nano flies1.txt
+(base) preetikayastha@H107-PN-LT:~$ nano flies2.txt
+(base) preetikayastha@H107-PN-LT:~$ nano drosophila_maths.sh
+(base) preetikayastha@H107-PN-LT:~$ bash drosophila_maths.sh
+^[[A^[[A^[[A^[[A^[[A
+
+
+
+
+
+
+^[[A^[[A^[[A^[[A^Z
+[2]+  Stopped                 bash drosophila_maths.sh
+(base) preetikayastha@H107-PN-LT:~$ ./script.sh flies1.txt flies2.txt
+-bash: ./script.sh: No such file or directory
+(base) preetikayastha@H107-PN-LT:~$ nano sum_drosophila.sh
+(base) preetikayastha@H107-PN-LT:~$ chmod +x sum_drosophila.sh
+(base) preetikayastha@H107-PN-LT:~$ nano flies1.txt
+(base) preetikayastha@H107-PN-LT:~$ nano flies2.txt
+(base) preetikayastha@H107-PN-LT:~$ ./sum_drosophila.sh flies1.txt flies2.txt
+Drosophila count in flies1.txt: 45
+Drosophila count in flies2.txt: 60
+Total Drosophila count: 105
+(base) preetikayastha@H107-PN-LT:~$
