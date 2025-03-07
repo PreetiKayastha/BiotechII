@@ -1,0 +1,166 @@
+Welcome to Ubuntu 24.04.1 LTS (GNU/Linux 5.15.167.4-microsoft-standard-WSL2 x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Tue Mar  4 17:31:49 EST 2025
+
+  System load:  0.56                Processes:             72
+  Usage of /:   8.9% of 1006.85GB   Users logged in:       0
+  Memory usage: 5%                  IPv4 address for eth0: 172.19.101.33
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+This message is shown once a day. To disable it please create the
+/home/preetikayastha/.hushlogin file.
+(base) preetikayastha@H107-PN-LT:~$ sudo apt install bcftools
+[sudo] password for preetikayastha:
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+bcftools is already the newest version (1.19-1build2).
+bcftools set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 118 not upgraded.
+(base) preetikayastha@H107-PN-LT:~$ bcftools mpileup -Ou -f reference.fa sampleA.sorted.bam > sampleA.mpileup
+[mpileup] 1 samples in 1 input files
+[mpileup] maximum number of reads per input file set to -d 250
+(base) preetikayastha@H107-PN-LT:~$ bcftools call -mv -Ob -o variantsA.bcf  sampleA.mpileup
+Note: none of --samples-file, --ploidy or --ploidy-file given, assuming all sites are diploid
+(base) preetikayastha@H107-PN-LT:~$ bcftools call -mv -Ob -o variantsA.bcf sampleA.mpileup
+Note: none of --samples-file, --ploidy or --ploidy-file given, assuming all sites are diploid
+(base) preetikayastha@H107-PN-LT:~$ bcftools view variantsA.bcf > variantsA.
+vcf
+(base) preetikayastha@H107-PN-LT:~$ less variantsA.vcf
+(base) preetikayastha@H107-PN-LT:~$ less variantsA.vcf
+(base) preetikayastha@H107-PN-LT:~$ less variantsA.vcf
+(base) preetikayastha@H107-PN-LT:~$ bcftools stats variantsA.vcf > summaryvcf.text
+(base) preetikayastha@H107-PN-LT:~$ less summaryvcf.text
+(base) preetikayastha@H107-PN-LT:~$ bcftools view
+
+About:   VCF/BCF conversion, view, subset and filter VCF/BCF files.
+Usage:   bcftools view [options] <in.vcf.gz> [region1 [...]]
+
+Output options:
+    -G, --drop-genotypes              Drop individual genotype information (after subsetting if -s option set)
+    -h, --header-only                 Print only the header in VCF output (equivalent to bcftools head)
+    -H, --no-header                   Suppress the header in VCF output
+        --with-header                 Print both header and records in VCF output [default]
+    -l, --compression-level [0-9]     Compression level: 0 uncompressed, 1 best speed, 9 best compression [-1]
+        --no-version                  Do not append version and command line to the header
+    -o, --output FILE                 Output file name [stdout]
+    -O, --output-type u|b|v|z[0-9]    u/b: un/compressed BCF, v/z: un/compressed VCF, 0-9: compression level [v]
+    -r, --regions REGION              Restrict to comma-separated list of regions
+    -R, --regions-file FILE           Restrict to regions listed in FILE
+        --regions-overlap 0|1|2       Include if POS in the region (0), record overlaps (1), variant overlaps (2) [1]
+    -t, --targets [^]REGION           Similar to -r but streams rather than index-jumps. Exclude regions with "^" prefix
+    -T, --targets-file [^]FILE        Similar to -R but streams rather than index-jumps. Exclude regions with "^" prefix
+        --targets-overlap 0|1|2       Include if POS in the region (0), record overlaps (1), variant overlaps (2) [0]
+        --threads INT                 Use multithreading with INT worker threads [0]
+
+Subset options:
+    -A, --trim-unseen-allele          Remove '<*>' or '<NON_REF>' at variant (-A) or at all (-AA) sites
+    -a, --trim-alt-alleles            Trim ALT alleles not seen in the genotype fields (or their subset with -s/-S)
+    -I, --no-update                   Do not (re)calculate INFO fields for the subset (currently INFO/AC and INFO/AN)
+    -s, --samples [^]LIST             Comma separated list of samples to include (or exclude with "^" prefix). Be careful
+                                        when combining filtering with sample subsetting as filtering comes (usually) first.
+                                        If unsure, split sample subsetting and filtering in two commands, using -Ou when piping.
+    -S, --samples-file [^]FILE        File of samples to include (or exclude with "^" prefix)
+        --force-samples               Only warn about unknown subset samples
+
+Filter options:
+    -c/C, --min-ac/--max-ac INT[:TYPE]     Minimum/maximum count for non-reference (nref), 1st alternate (alt1), least frequent
+                                               (minor), most frequent (major) or sum of all but most frequent (nonmajor) alleles [nref]
+    -f,   --apply-filters LIST             Require at least one of the listed FILTER strings (e.g. "PASS,.")
+    -g,   --genotype [^]hom|het|miss       Require one or more hom/het/missing genotype or, if prefixed with "^", exclude such sites
+    -i/e, --include/--exclude EXPR         Select/exclude sites for which the expression is true (see man page for details)
+    -k/n, --known/--novel                  Select known/novel sites only (ID is not/is '.')
+    -m/M, --min-alleles/--max-alleles INT  Minimum/maximum number of alleles listed in REF and ALT (e.g. -m2 -M2 for biallelic sites)
+    -p/P, --phased/--exclude-phased        Select/exclude sites where all samples are phased
+    -q/Q, --min-af/--max-af FLOAT[:TYPE]   Minimum/maximum frequency for non-reference (nref), 1st alternate (alt1), least frequent
+                                               (minor), most frequent (major) or sum of all but most frequent (nonmajor) alleles [nref]
+    -u/U, --uncalled/--exclude-uncalled    Select/exclude sites without a called genotype
+    -v/V, --types/--exclude-types LIST     Select/exclude comma-separated list of variant types: snps,indels,mnps,ref,bnd,other [null]
+    -x/X, --private/--exclude-private      Select/exclude sites where the non-reference alleles are exclusive (private) to the subset samples
+          --write-index                    Automatically index the output files [off]
+
+(base) preetikayastha@H107-PN-LT:~$ bcftools
+
+Program: bcftools (Tools for variant calling and manipulating VCFs and BCFs)
+Version: 1.19 (using htslib 1.19)
+
+Usage:   bcftools [--version|--version-only] [--help] <command> <argument>
+
+Commands:
+
+ -- Indexing
+    index        index VCF/BCF files
+
+ -- VCF/BCF manipulation
+    annotate     annotate and edit VCF/BCF files
+    concat       concatenate VCF/BCF files from the same set of samples
+    convert      convert VCF/BCF files to different formats and back
+    head         view VCF/BCF file headers
+    isec         intersections of VCF/BCF files
+    merge        merge VCF/BCF files files from non-overlapping sample sets
+    norm         left-align and normalize indels
+    plugin       user-defined plugins
+    query        transform VCF/BCF into user-defined formats
+    reheader     modify VCF/BCF header, change sample names
+    sort         sort VCF/BCF file
+    view         VCF/BCF conversion, view, subset and filter VCF/BCF files
+
+ -- VCF/BCF analysis
+    call         SNP/indel calling
+    consensus    create consensus sequence by applying VCF variants
+    cnv          HMM CNV calling
+    csq          call variation consequences
+    filter       filter VCF/BCF files using fixed thresholds
+    gtcheck      check sample concordance, detect sample swaps and contamination
+    mpileup      multi-way pileup producing genotype likelihoods
+    roh          identify runs of autozygosity (HMM)
+    stats        produce VCF/BCF stats
+
+ -- Plugins (collection of programs for calling, file manipulation & analysis)
+    39 plugins available, run "bcftools plugin -lv" to see a complete list
+
+ Most commands accept VCF, bgzipped VCF, and BCF with the file type detected
+ automatically even when streaming from a pipe. Indexed VCF and BCF will work
+ in all situations. Un-indexed VCF and BCF and streams will work in most but
+ not all situations.
+
+(base) preetikayastha@H107-PN-LT:~$ bcftools filter -e 'QUAL<20' -o filtered_by_qual.vcf variantsA.vcf
+(base) preetikayastha@H107-PN-LT:~$ less filtered_by_qual.vcf
+
+
+
+
+(base) preetikayastha@H107-PN-LT:~$ bcftools stats filtered_by_qual.vcf > summary_quality_filter.vcf.text
+(base) preetikayastha@H107-PN-LT:~$ less summary_quality_filter.vcf.text
+(base) preetikayastha@H107-PN-LT:~$
+(base) preetikayastha@H107-PN-LT:~$ bcftools filter -e 'DP<10' -o filtered_by_depth.vcf variantsA.vcf
+(base) preetikayastha@H107-PN-LT:~$ bcftools stats filtered_by_depth.vcf > summary_filtered_by_depth.vcf.text
+(base) preetikayastha@H107-PN-LT:~$ less  summary_filtered_by_depth.vcf.text
+(base) preetikayastha@H107-PN-LT:~$ less  summary_filtered_by_depth.vcf.text
+(base) preetikayastha@H107-PN-LT:~$ less summaryvcf.text
+(base) preetikayastha@H107-PN-LT:~$ less filtered_by_depth.vcf
+(base) preetikayastha@H107-PN-LT:~$ bcftools filter -e 'QUAL<20 || DP<10' -o filtered_variants.vcf variantsA.vcf
+(base) preetikayastha@H107-PN-LT:~$ less filtered_variants.vcf
+(base) preetikayastha@H107-PN-LT:~$ bcftools stats filtered_variants.vcf > qual_depth_combined_filtered_variants.vcf
+(base) preetikayastha@H107-PN-LT:~$ less
+Missing filename ("less --help" for help)
+(base) preetikayastha@H107-PN-LT:~$ less qual_depth_combined_filtered_variants.vcf
+(base) preetikayastha@H107-PN-LT:~$ less  summary_filtered_by_depth.vcf.text
+(base) preetikayastha@H107-PN-LT:~$ less summary_quality_filter.vcf.text
+(base) preetikayastha@H107-PN-LT:~$ less filtered_by_depth.vcf
+(base) preetikayastha@H107-PN-LT:~$ less  summary_filtered_by_depth.vcf.text
+(base) preetikayastha@H107-PN-LT:~$ bcftools stats filtered_variants.vcf > qual_depth_combined_filtered_variants.vcf.text
+(base) preetikayastha@H107-PN-LT:~$ less qual_depth_combined_filtered_variants.vcf.text
+(base) preetikayastha@H107-PN-LT:~$ bcftools filter -e 'DP<30' -o filtered_by_depth.vcf variantsA.vcf
+(base) preetikayastha@H107-PN-LT:~$ bcftools stats filtered_by_depth.vcf > summary_filtered_by_depth_30.vcf.text
+(base) preetikayastha@H107-PN-LT:~$ less summary_filtered_by_depth_30.vcf.text
+
