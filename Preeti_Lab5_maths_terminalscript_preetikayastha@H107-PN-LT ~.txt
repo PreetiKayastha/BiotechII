@@ -43,4 +43,4 @@ Drospepper                                        activity2_directory  index.htm
 Drosophila count in flies1.txt: 45
 Drosophila count in flies2.txt: 60
 Total Drosophila count: 105
-(base) preetikayastha@H107-PN-LT:~$
+
