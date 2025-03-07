@@ -30,14 +30,14 @@ bcftools stats variantsB.vcf >  SampleBsummaryvcf.text
 
 bcftools filter -e 'QUAL<25' -o filtered_by_qual_25.vcf variantsB.vcf
 
-bcftools stats filtered_by_qual_25.vcf > summary_filtered_by_qual_25.vcf.text
+bcftools stats filtered_by_qual_25.vcf > summaryB_filtered_by_qual_25.vcf.text
 
 bcftools filter -e 'DP<15' -o filtered_by_depth_15.vcf variantsB.vcf
 
-bcftools stats filtered_by_depth_15.vcf > summary_filtered_by_depth_15.vcf.text
+bcftools stats filtered_by_depth_15.vcf > summaryB_filtered_by_depth_15.vcf.text
 
 bcftools filter -e 'QUAL<25 || DP<15' -o combined_filtered_variants.vcf variantsB.vcf
 
-bcftools stats combined_filtered_variants.vcf > qual_depth_combined_filtered_variants.vcf.text
+bcftools stats combined_filtered_variants.vcf > qual_depth_combined_filtered_variantsB.vcf.text
 
 
