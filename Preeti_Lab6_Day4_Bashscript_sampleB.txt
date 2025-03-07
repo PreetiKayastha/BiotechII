@@ -1,0 +1,43 @@
+#!/bin/bash
+
+fastqc sampleB_R1.fq.gz
+
+fastqc sampleB_R2.fq.gz
+
+cutadapt -a AGATCGGAAG -A AGATCGGAAG -m 100 -o sampleB_R1.out.fq.gz -p sampleB_R2.out.fq.gz sampleB_R1.fq.gz sampleB_R2.fq.gz
+
+fastqc sampleB_R1.out.fq.gz
+
+fastqc sampleB_R2.out.fq.gz
+
+bwa index reference.fa
+
+bwa mem reference.fa sampleB_R1.out.fq.gz -p sampleB_R2.out.fq.gz > sampleB.sam
+
+samtools view -S -b sampleB.sam > sampleB.bam
+
+samtools sort sampleB.bam -o sampleB.sorted.bam
+
+samtools index sampleB.sorted.bam
+
+bcftools mpileup -Ou -f reference.fa sampleB.sorted.bam > sampleB.mpileup
+
+bcftools call -mv -Ob -o variantsB.bcf sampleB.mpileup
+
+bcftools view variantsB.bcf > variantsB.vcf
+
+bcftools stats variantsB.vcf >  SampleBsummaryvcf.text
+
+bcftools filter -e 'QUAL<25' -o filtered_by_qual_25.vcf variantsB.vcf
+
+bcftools stats filtered_by_qual_25.vcf > summary_filtered_by_qual_25.vcf.text
+
+bcftools filter -e 'DP<15' -o filtered_by_depth_15.vcf variantsB.vcf
+
+bcftools stats filtered_by_depth_15.vcf > summary_filtered_by_depth_15.vcf.text
+
+bcftools filter -e 'QUAL<25 || DP<15' -o combined_filtered_variants.vcf variantsB.vcf
+
+bcftools stats combined_filtered_variants.vcf > qual_depth_combined_filtered_variants.vcf.text
+
+
