@@ -1,0 +1,1300 @@
+Welcome to Ubuntu 24.04.1 LTS (GNU/Linux 5.15.167.4-microsoft-standard-WSL2 x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Fri Mar 21 12:11:16 EDT 2025
+
+  System load:  0.4                  Processes:             71
+  Usage of /:   10.3% of 1006.85GB   Users logged in:       0
+  Memory usage: 5%                   IPv4 address for eth0: 172.19.101.33
+  Swap usage:   0%
+
+
+This message is shown once a day. To disable it please create the
+/home/preetikayastha/.hushlogin file.
+(base) preetikayastha@H107-PN-LT:~$ wget https://github.com/GwonjinLee/BiotechII/releases/download/RNAseq/RNAseq_data.zip
+--2025-03-21 12:11:34--  https://github.com/GwonjinLee/BiotechII/releases/download/RNAseq/RNAseq_data.zip
+Resolving github.com (github.com)... 140.82.113.3
+Connecting to github.com (github.com)|140.82.113.3|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/920315734/6c8cf7c0-a29e-4307-8da2-2a4f5ee66787?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250321%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250321T161135Z&X-Amz-Expires=300&X-Amz-Signature=9958522379e4c4c56074dfb130d031d18008c525b75f28f1f869d6fd55762bdb&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DRNAseq_data.zip&response-content-type=application%2Foctet-stream [following]
+--2025-03-21 12:11:35--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/920315734/6c8cf7c0-a29e-4307-8da2-2a4f5ee66787?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250321%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250321T161135Z&X-Amz-Expires=300&X-Amz-Signature=9958522379e4c4c56074dfb130d031d18008c525b75f28f1f869d6fd55762bdb&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DRNAseq_data.zip&response-content-type=application%2Foctet-stream
+Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.110.133, 185.199.108.133, 185.199.109.133, ...
+Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.110.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 468500417 (447M) [application/octet-stream]
+Saving to: ‘RNAseq_data.zip.1’
+
+RNAseq_data.zip.1             100%[=================================================>] 446.80M  1.72MB/s    in 4m 22s
+
+2025-03-21 12:15:45 (1.70 MB/s) - ‘RNAseq_data.zip.1’ saved [468500417/468500417]
+
+(base) preetikayastha@H107-PN-LT:~$ ls
+Cucurmin                                          flies1.txt         reference.fa.ann
+Drosophila_melanogaster.BDGP6.46.113.gtf          flies2.txt         reference.fa.bwt
+Drosophila_melanogaster.BDGP6.46.dna.toplevel.fa  ht-seqrunDros.sh   reference.fa.fai
+Drospepper                                        index.html         reference.fa.pac
+RNAseq_data.zip                                   index.html.1       reference.fa.sa
+RNAseq_data.zip.1                                 miniconda3         reference.fa:Zone.Identifier
+SRR20313491                                       ncbi               sampleA.bam
+SRR20313492                                       new_name.txt       sampleA.sam
+SampleA                                           newtextfile.ext    sampleA.sorted.bam
+SampleB                                           ntestfile.sh       sampleA_R1.out.fq.gz
+activity.sh                                       ntestfilefinal.sh  sampleA_R2.out.fq.gz
+activity2_directory                               path               sum_drosophila.sh
+activity_directory                                pk                 summaryvcf.text
+drosophila_maths.sh                               practice_folder    test.sh
+example_snp.vcf                                   reference.fa
+example_snp.vcf:Zone.Identifier                   reference.fa.amb
+(base) preetikayastha@H107-PN-LT:~$ unzip RNAseq_data.zip.1
+Archive:  RNAseq_data.zip.1
+   creating: RNAseq_data/
+   creating: RNAseq_data/samples/
+  inflating: RNAseq_data/samples/SAMPLE1_R2.fastq.gz
+  inflating: RNAseq_data/samples/SAMPLE1_R1.fastq.gz
+  inflating: RNAseq_data/samples/SAMPLE2_R2.fastq.gz
+  inflating: RNAseq_data/samples/SAMPLE2_R1.fastq.gz
+   creating: RNAseq_data/genes/
+  inflating: RNAseq_data/genes/chrX.gtf
+   creating: RNAseq_data/genome/
+  inflating: RNAseq_data/genome/chrX.fa
+   creating: RNAseq_data/indexes/
+  inflating: RNAseq_data/indexes/chrX_tran.8.ht2
+  inflating: RNAseq_data/indexes/chrX_tran.1.ht2
+  inflating: RNAseq_data/indexes/chrX_tran.3.ht2
+  inflating: RNAseq_data/indexes/chrX_tran.7.ht2
+  inflating: RNAseq_data/indexes/chrX_tran.5.ht2
+  inflating: RNAseq_data/indexes/chrX_tran.2.ht2
+  inflating: RNAseq_data/indexes/chrX_tran.6.ht2
+  inflating: RNAseq_data/indexes/chrX_tran.4.ht2
+(base) preetikayastha@H107-PN-LT:~$ ls
+Cucurmin                                          example_snp.vcf:Zone.Identifier  reference.fa.amb
+Drosophila_melanogaster.BDGP6.46.113.gtf          flies1.txt                       reference.fa.ann
+Drosophila_melanogaster.BDGP6.46.dna.toplevel.fa  flies2.txt                       reference.fa.bwt
+Drospepper                                        ht-seqrunDros.sh                 reference.fa.fai
+RNAseq_data                                       index.html                       reference.fa.pac
+RNAseq_data.zip                                   index.html.1                     reference.fa.sa
+RNAseq_data.zip.1                                 miniconda3                       reference.fa:Zone.Identifier
+SRR20313491                                       ncbi                             sampleA.bam
+SRR20313492                                       new_name.txt                     sampleA.sam
+SampleA                                           newtextfile.ext                  sampleA.sorted.bam
+SampleB                                           ntestfile.sh                     sampleA_R1.out.fq.gz
+activity.sh                                       ntestfilefinal.sh                sampleA_R2.out.fq.gz
+activity2_directory                               path                             sum_drosophila.sh
+activity_directory                                pk                               summaryvcf.text
+drosophila_maths.sh                               practice_folder                  test.sh
+example_snp.vcf                                   reference.fa
+(base) preetikayastha@H107-PN-LT:~$ ls
+Cucurmin                                          example_snp.vcf:Zone.Identifier  reference.fa.amb
+Drosophila_melanogaster.BDGP6.46.113.gtf          flies1.txt                       reference.fa.ann
+Drosophila_melanogaster.BDGP6.46.dna.toplevel.fa  flies2.txt                       reference.fa.bwt
+Drospepper                                        ht-seqrunDros.sh                 reference.fa.fai
+RNAseq_data                                       index.html                       reference.fa.pac
+RNAseq_data.zip                                   index.html.1                     reference.fa.sa
+RNAseq_data.zip.1                                 miniconda3                       reference.fa:Zone.Identifier
+SRR20313491                                       ncbi                             sampleA.bam
+SRR20313492                                       new_name.txt                     sampleA.sam
+SampleA                                           newtextfile.ext                  sampleA.sorted.bam
+SampleB                                           ntestfile.sh                     sampleA_R1.out.fq.gz
+activity.sh                                       ntestfilefinal.sh                sampleA_R2.out.fq.gz
+activity2_directory                               path                             sum_drosophila.sh
+activity_directory                                pk                               summaryvcf.text
+drosophila_maths.sh                               practice_folder                  test.sh
+example_snp.vcf                                   reference.fa
+(base) preetikayastha@H107-PN-LT:~$ unzip RNAseq_data.zip
+Archive:  RNAseq_data.zip
+replace RNAseq_data/samples/SAMPLE1_R2.fastq.gz? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: RNAseq_data/samples/SAMPLE1_R2.fastq.gz
+replace RNAseq_data/samples/SAMPLE1_R1.fastq.gz? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: RNAseq_data/samples/SAMPLE1_R1.fastq.gz
+replace RNAseq_data/samples/SAMPLE2_R2.fastq.gz? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: RNAseq_data/samples/SAMPLE2_R2.fastq.gz
+replace RNAseq_data/samples/SAMPLE2_R1.fastq.gz? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: RNAseq_data/samples/SAMPLE2_R1.fastq.gz
+replace RNAseq_data/genes/chrX.gtf? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: RNAseq_data/genes/chrX.gtf
+replace RNAseq_data/genome/chrX.fa? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: RNAseq_data/genome/chrX.fa
+replace RNAseq_data/indexes/chrX_tran.8.ht2? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: RNAseq_data/indexes/chrX_tran.8.ht2
+replace RNAseq_data/indexes/chrX_tran.1.ht2? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: RNAseq_data/indexes/chrX_tran.1.ht2
+replace RNAseq_data/indexes/chrX_tran.3.ht2? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: RNAseq_data/indexes/chrX_tran.3.ht2
+replace RNAseq_data/indexes/chrX_tran.7.ht2? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: RNAseq_data/indexes/chrX_tran.7.ht2
+replace RNAseq_data/indexes/chrX_tran.5.ht2? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: RNAseq_data/indexes/chrX_tran.5.ht2
+replace RNAseq_data/indexes/chrX_tran.2.ht2? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: RNAseq_data/indexes/chrX_tran.2.ht2
+replace RNAseq_data/indexes/chrX_tran.6.ht2? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: RNAseq_data/indexes/chrX_tran.6.ht2
+replace RNAseq_data/indexes/chrX_tran.4.ht2? [y]es, [n]o, [A]ll, [N]one, [r]ename: y
+  inflating: RNAseq_data/indexes/chrX_tran.4.ht2
+(base) preetikayastha@H107-PN-LT:~$ ls
+Cucurmin                                          example_snp.vcf:Zone.Identifier  reference.fa.amb
+Drosophila_melanogaster.BDGP6.46.113.gtf          flies1.txt                       reference.fa.ann
+Drosophila_melanogaster.BDGP6.46.dna.toplevel.fa  flies2.txt                       reference.fa.bwt
+Drospepper                                        ht-seqrunDros.sh                 reference.fa.fai
+RNAseq_data                                       index.html                       reference.fa.pac
+RNAseq_data.zip                                   index.html.1                     reference.fa.sa
+RNAseq_data.zip.1                                 miniconda3                       reference.fa:Zone.Identifier
+SRR20313491                                       ncbi                             sampleA.bam
+SRR20313492                                       new_name.txt                     sampleA.sam
+SampleA                                           newtextfile.ext                  sampleA.sorted.bam
+SampleB                                           ntestfile.sh                     sampleA_R1.out.fq.gz
+activity.sh                                       ntestfilefinal.sh                sampleA_R2.out.fq.gz
+activity2_directory                               path                             sum_drosophila.sh
+activity_directory                                pk                               summaryvcf.text
+drosophila_maths.sh                               practice_folder                  test.sh
+example_snp.vcf                                   reference.fa
+(base) preetikayastha@H107-PN-LT:~$ cd RNAseq_data
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ ls
+genes  genome  indexes  samples
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ cd samples
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data/samples$ ls
+SAMPLE1_R1.fastq.gz  SAMPLE1_R2.fastq.gz  SAMPLE2_R1.fastq.gz  SAMPLE2_R2.fastq.gz
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data/samples$ fastqc SAMPLE1_R1.fastq.gz  SAMPLE1_R2.fastq.gz  SAMPLE2_R1.fastq.gz  SAMPLE2_R2.fastq.gz
+application/gzip
+application/gzip
+Started analysis of SAMPLE1_R1.fastq.gz
+application/gzip
+application/gzip
+Approx 5% complete for SAMPLE1_R1.fastq.gz
+Approx 10% complete for SAMPLE1_R1.fastq.gz
+Approx 15% complete for SAMPLE1_R1.fastq.gz
+Approx 20% complete for SAMPLE1_R1.fastq.gz
+Approx 25% complete for SAMPLE1_R1.fastq.gz
+Approx 30% complete for SAMPLE1_R1.fastq.gz
+Approx 35% complete for SAMPLE1_R1.fastq.gz
+Approx 40% complete for SAMPLE1_R1.fastq.gz
+Approx 45% complete for SAMPLE1_R1.fastq.gz
+Approx 50% complete for SAMPLE1_R1.fastq.gz
+Approx 55% complete for SAMPLE1_R1.fastq.gz
+Approx 60% complete for SAMPLE1_R1.fastq.gz
+Approx 65% complete for SAMPLE1_R1.fastq.gz
+Approx 70% complete for SAMPLE1_R1.fastq.gz
+Approx 75% complete for SAMPLE1_R1.fastq.gz
+Approx 80% complete for SAMPLE1_R1.fastq.gz
+Approx 85% complete for SAMPLE1_R1.fastq.gz
+Approx 90% complete for SAMPLE1_R1.fastq.gz
+Approx 95% complete for SAMPLE1_R1.fastq.gz
+Analysis complete for SAMPLE1_R1.fastq.gz
+Started analysis of SAMPLE1_R2.fastq.gz
+Approx 5% complete for SAMPLE1_R2.fastq.gz
+Approx 10% complete for SAMPLE1_R2.fastq.gz
+Approx 15% complete for SAMPLE1_R2.fastq.gz
+Approx 20% complete for SAMPLE1_R2.fastq.gz
+Approx 25% complete for SAMPLE1_R2.fastq.gz
+Approx 30% complete for SAMPLE1_R2.fastq.gz
+Approx 35% complete for SAMPLE1_R2.fastq.gz
+Approx 40% complete for SAMPLE1_R2.fastq.gz
+Approx 45% complete for SAMPLE1_R2.fastq.gz
+Approx 50% complete for SAMPLE1_R2.fastq.gz
+Approx 55% complete for SAMPLE1_R2.fastq.gz
+Approx 60% complete for SAMPLE1_R2.fastq.gz
+Approx 65% complete for SAMPLE1_R2.fastq.gz
+Approx 70% complete for SAMPLE1_R2.fastq.gz
+Approx 75% complete for SAMPLE1_R2.fastq.gz
+Approx 80% complete for SAMPLE1_R2.fastq.gz
+Approx 85% complete for SAMPLE1_R2.fastq.gz
+Approx 90% complete for SAMPLE1_R2.fastq.gz
+Approx 95% complete for SAMPLE1_R2.fastq.gz
+Analysis complete for SAMPLE1_R2.fastq.gz
+Started analysis of SAMPLE2_R1.fastq.gz
+Approx 5% complete for SAMPLE2_R1.fastq.gz
+Approx 10% complete for SAMPLE2_R1.fastq.gz
+Approx 15% complete for SAMPLE2_R1.fastq.gz
+Approx 20% complete for SAMPLE2_R1.fastq.gz
+Approx 25% complete for SAMPLE2_R1.fastq.gz
+Approx 30% complete for SAMPLE2_R1.fastq.gz
+Approx 35% complete for SAMPLE2_R1.fastq.gz
+Approx 40% complete for SAMPLE2_R1.fastq.gz
+Approx 45% complete for SAMPLE2_R1.fastq.gz
+Approx 50% complete for SAMPLE2_R1.fastq.gz
+Approx 55% complete for SAMPLE2_R1.fastq.gz
+Approx 60% complete for SAMPLE2_R1.fastq.gz
+Approx 65% complete for SAMPLE2_R1.fastq.gz
+Approx 70% complete for SAMPLE2_R1.fastq.gz
+Approx 75% complete for SAMPLE2_R1.fastq.gz
+Approx 80% complete for SAMPLE2_R1.fastq.gz
+Approx 85% complete for SAMPLE2_R1.fastq.gz
+Approx 90% complete for SAMPLE2_R1.fastq.gz
+Approx 95% complete for SAMPLE2_R1.fastq.gz
+Analysis complete for SAMPLE2_R1.fastq.gz
+Started analysis of SAMPLE2_R2.fastq.gz
+Approx 5% complete for SAMPLE2_R2.fastq.gz
+Approx 10% complete for SAMPLE2_R2.fastq.gz
+Approx 15% complete for SAMPLE2_R2.fastq.gz
+Approx 20% complete for SAMPLE2_R2.fastq.gz
+Approx 25% complete for SAMPLE2_R2.fastq.gz
+Approx 30% complete for SAMPLE2_R2.fastq.gz
+Approx 35% complete for SAMPLE2_R2.fastq.gz
+Approx 40% complete for SAMPLE2_R2.fastq.gz
+Approx 45% complete for SAMPLE2_R2.fastq.gz
+Approx 50% complete for SAMPLE2_R2.fastq.gz
+Approx 55% complete for SAMPLE2_R2.fastq.gz
+Approx 60% complete for SAMPLE2_R2.fastq.gz
+Approx 65% complete for SAMPLE2_R2.fastq.gz
+Approx 70% complete for SAMPLE2_R2.fastq.gz
+Approx 75% complete for SAMPLE2_R2.fastq.gz
+Approx 80% complete for SAMPLE2_R2.fastq.gz
+Approx 85% complete for SAMPLE2_R2.fastq.gz
+Approx 90% complete for SAMPLE2_R2.fastq.gz
+Approx 95% complete for SAMPLE2_R2.fastq.gz
+Analysis complete for SAMPLE2_R2.fastq.gz
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data/samples$ cd ..
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ ls
+genes  genome  indexes  samples
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ hisat2 -p 8 --no-unal --dta -x indexes/chrX_tran -1 samples/SAMPLE1_R1.fastq.gz -2 samples/SAMPLE1_R2.fastq.gz -S SAMPLE1.sam
+580042 reads; of these:
+  580042 (100.00%) were paired; of these:
+    49702 (8.57%) aligned concordantly 0 times
+    525184 (90.54%) aligned concordantly exactly 1 time
+    5156 (0.89%) aligned concordantly >1 times
+    ----
+    49702 pairs aligned concordantly 0 times; of these:
+      1358 (2.73%) aligned discordantly 1 time
+    ----
+    48344 pairs aligned 0 times concordantly or discordantly; of these:
+      96688 mates make up the pairs; of these:
+        49496 (51.19%) aligned 0 times
+        46162 (47.74%) aligned exactly 1 time
+        1030 (1.07%) aligned >1 times
+95.73% overall alignment rate
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ ls
+SAMPLE1.sam  genes  genome  indexes  samples
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ hisat2 -p 8 --no-unal --dta -x indexes/chrX_tran -1 samples/SAMPLE2_R1.fastq.gz -2 samples/SAMPLE2_R2.fastq.gz -S SAMPLE2.sam
+843202 reads; of these:
+  843202 (100.00%) were paired; of these:
+    63894 (7.58%) aligned concordantly 0 times
+    771068 (91.45%) aligned concordantly exactly 1 time
+    8240 (0.98%) aligned concordantly >1 times
+    ----
+    63894 pairs aligned concordantly 0 times; of these:
+      2053 (3.21%) aligned discordantly 1 time
+    ----
+    61841 pairs aligned 0 times concordantly or discordantly; of these:
+      123682 mates make up the pairs; of these:
+        62496 (50.53%) aligned 0 times
+        59739 (48.30%) aligned exactly 1 time
+        1447 (1.17%) aligned >1 times
+96.29% overall alignment rate
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ ls
+SAMPLE1.sam  SAMPLE2.sam  genes  genome  indexes  samples
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ mkdir summary
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ ls
+SAMPLE1.sam  SAMPLE2.sam  genes  genome  indexes  samples  summary
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ cd ^C
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ cd SAMPLE1.sam summary
+-bash: cd: too many arguments
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ mv SAMPLE1.sam summary
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ mv SAMPLE2.sam summary
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ ls
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ hisat2 -p 8 --no-unal --dta -x indexes/chrX_tran -1 samples/SAMPLE2_R1.fastq.gz -2 samples/SAMPLE2_R2.fastq.gz -S SAMPLE2.sam --summary-file summary/SAMPLE2.txt
+843202 reads; of these:
+  843202 (100.00%) were paired; of these:
+    63894 (7.58%) aligned concordantly 0 times
+    771068 (91.45%) aligned concordantly exactly 1 time
+    8240 (0.98%) aligned concordantly >1 times
+    ----
+    63894 pairs aligned concordantly 0 times; of these:
+      2053 (3.21%) aligned discordantly 1 time
+    ----
+    61841 pairs aligned 0 times concordantly or discordantly; of these:
+      123682 mates make up the pairs; of these:
+        62496 (50.53%) aligned 0 times
+        59739 (48.30%) aligned exactly 1 time
+        1447 (1.17%) aligned >1 times
+96.29% overall alignment rate
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ hisat2 -p 8 --no-unal --dta -x indexes/chrX_tran -1 samples/SAMPLE1_R1.fastq.gz -2 samples/SAMPLE1_R2.fa
+stq.gz -S SAMPLE1.sam --summary-file summary/SAMPLE1.txt
+580042 reads; of these:
+  580042 (100.00%) were paired; of these:
+    49702 (8.57%) aligned concordantly 0 times
+    525184 (90.54%) aligned concordantly exactly 1 time
+    5156 (0.89%) aligned concordantly >1 times
+    ----
+    49702 pairs aligned concordantly 0 times; of these:
+      1358 (2.73%) aligned discordantly 1 time
+    ----
+    48344 pairs aligned 0 times concordantly or discordantly; of these:
+      96688 mates make up the pairs; of these:
+        49496 (51.19%) aligned 0 times
+        46162 (47.74%) aligned exactly 1 time
+        1030 (1.07%) aligned >1 times
+95.73% overall alignment rate
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ ls
+SAMPLE1.sam  SAMPLE2.sam  genes  genome  indexes  samples  summary
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ cd summary
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data/summary$ ls
+SAMPLE1.sam  SAMPLE1.txt  SAMPLE2.sam  SAMPLE2.txt
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data/summary$ cd ..
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ ls
+SAMPLE1.sam  SAMPLE2.sam  genes  genome  indexes  samples  summary
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ rm SAMPLE1.sam  SAMPLE2.sam
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ ls
+genes  genome  indexes  samples  summary
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ rm summary
+rm: cannot remove 'summary': Is a directory
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ rmdir summary
+rmdir: failed to remove 'summary': Directory not empty
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ cd summary
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data/summary$ ls
+SAMPLE1.sam  SAMPLE1.txt  SAMPLE2.sam  SAMPLE2.txt
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data/summary$ rm SAMPLE1.sam  SAMPLE1.txt  SAMPLE2.sam  SAMPLE2.txt
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data/summary$ cd ..
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ ls
+genes  genome  indexes  samples  summary
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ rmdir summary
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ ls
+genes  genome  indexes  samples
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ nano final.sh
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ bash final.sh
+final.sh: line 4: NAMES: command not found
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ cd samples
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data/samples$ ls
+SAMPLE1_R1.fastq.gz     SAMPLE1_R2_fastqc.html  SAMPLE2_R1_fastqc.zip
+SAMPLE1_R1_fastqc.html  SAMPLE1_R2_fastqc.zip   SAMPLE2_R2.fastq.gz
+SAMPLE1_R1_fastqc.zip   SAMPLE2_R1.fastq.gz     SAMPLE2_R2_fastqc.html
+SAMPLE1_R2.fastq.gz     SAMPLE2_R1_fastqc.html  SAMPLE2_R2_fastqc.zip
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data/samples$ nano finalfinal.sh
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data/samples$ bash finalfinal.sh
+finalfinal.sh: line 1: GNU: command not found
+finalfinal.sh: line 5: NAMES: command not found
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data/samples$ bash finalfinal.sh
+finalfinal.sh: line 1: GNU: command not found
+finalfinal.sh: line 5: NAMES: command not found
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data/samples$ nano finalfinal.sh
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data/samples$ bash finalfinal.sh
+finalfinal.sh: line 1: GNU: command not found
+(ERR): Read file 'samples/SAMPLE1_R1.fastq.gz' doesn't exist
+Exiting now ...
+(ERR): Read file 'samples/SAMPLE2_R1.fastq.gz' doesn't exist
+Exiting now ...
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data/samples$ nano finalfinal.sh
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data/samples$ bash finalfinal.sh
+finalfinal.sh: line 1: GNU: command not found
+(ERR): Read file 'samples/SAMPLE1_R1.fastq.gz' doesn't exist
+Exiting now ...
+(ERR): Read file 'samples/SAMPLE2_R1.fastq.gz' doesn't exist
+Exiting now ...
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data/samples$ cd..
+cd..: command not found
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data/samples$ cd ..
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ ls
+final.sh  genes  genome  indexes  samples
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ nano final.sh
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ bash final.sh
+final.sh: line 4: NAMES: command not found
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ nano final.sh
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ bash final.sh
+final.sh: line 4: NAMES: command not found
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ ls
+final.sh  genes  genome  indexes  samples
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ hisat2 -p 8 --no-unal --dta -x indexes/chrX_tran -1 samples/SAMPLE2_R1.fastq.gz -2 samples/SAMPLE2_R2.fastq.gz -S SAMPLE2.sam
+843202 reads; of these:
+  843202 (100.00%) were paired; of these:
+    63894 (7.58%) aligned concordantly 0 times
+    771068 (91.45%) aligned concordantly exactly 1 time
+    8240 (0.98%) aligned concordantly >1 times
+    ----
+    63894 pairs aligned concordantly 0 times; of these:
+      2053 (3.21%) aligned discordantly 1 time
+    ----
+    61841 pairs aligned 0 times concordantly or discordantly; of these:
+      123682 mates make up the pairs; of these:
+        62496 (50.53%) aligned 0 times
+        59739 (48.30%) aligned exactly 1 time
+        1447 (1.17%) aligned >1 times
+96.29% overall alignment rate
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ hisat2 -p 8 --no-unal --dta -x indexes/chrX_tran -1 samples/SAMPLE1_R1.fastq.gz -2 samples/SAMPLE1_R2.fastq.gz -S SAMPLE1.sam --summary-file summary/SAMPLE1.txt
+580042 reads; of these:
+  580042 (100.00%) were paired; of these:
+    49702 (8.57%) aligned concordantly 0 times
+    525184 (90.54%) aligned concordantly exactly 1 time
+    5156 (0.89%) aligned concordantly >1 times
+    ----
+    49702 pairs aligned concordantly 0 times; of these:
+      1358 (2.73%) aligned discordantly 1 time
+    ----
+    48344 pairs aligned 0 times concordantly or discordantly; of these:
+      96688 mates make up the pairs; of these:
+        49496 (51.19%) aligned 0 times
+        46162 (47.74%) aligned exactly 1 time
+        1030 (1.07%) aligned >1 times
+95.73% overall alignment rate
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ hisat2 -p 8 --no-unal --dta -x indexes/chrX_tran -1 samples/SAMPLE1_R1.fastq.gz -2 samples/SAMPLE1_R2.fastq.gz -S SAMPLE1.sam --summary-file summary/SAMPLE1.txt
+^[[A580042 reads; of these:
+  580042 (100.00%) were paired; of these:
+    49702 (8.57%) aligned concordantly 0 times
+    525184 (90.54%) aligned concordantly exactly 1 time
+    5156 (0.89%) aligned concordantly >1 times
+    ----
+    49702 pairs aligned concordantly 0 times; of these:
+      1358 (2.73%) aligned discordantly 1 time
+    ----
+    48344 pairs aligned 0 times concordantly or discordantly; of these:
+      96688 mates make up the pairs; of these:
+        49496 (51.19%) aligned 0 times
+        46162 (47.74%) aligned exactly 1 time
+        1030 (1.07%) aligned >1 times
+95.73% overall alignment rate
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ hisat2 -p 8 --no-unal --dta -x indexes/chrX_tran -1 samples/SAMPLE2_R1.fastq.gz -2 samples/SAMPLE2_R2.fastq.gz -S SAMPLE2.sam --summary-file summary/SAMPLE2.txt
+843202 reads; of these:
+  843202 (100.00%) were paired; of these:
+    63894 (7.58%) aligned concordantly 0 times
+    771068 (91.45%) aligned concordantly exactly 1 time
+    8240 (0.98%) aligned concordantly >1 times
+    ----
+    63894 pairs aligned concordantly 0 times; of these:
+      2053 (3.21%) aligned discordantly 1 time
+    ----
+    61841 pairs aligned 0 times concordantly or discordantly; of these:
+      123682 mates make up the pairs; of these:
+        62496 (50.53%) aligned 0 times
+        59739 (48.30%) aligned exactly 1 time
+        1447 (1.17%) aligned >1 times
+96.29% overall alignment rate
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ ls
+SAMPLE1.sam  SAMPLE2.sam  final.sh  genes  genome  indexes  samples
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ mkdir summary
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ ls
+SAMPLE1.sam  final.sh  genome   samples
+SAMPLE2.sam  genes     indexes  summary
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ hisat2 -p 8 --no-unal --dta -x indexes/chrX_tran -1 samples/SAMPLE1_R1.fastq.gz -2 samples/SAMPLE1_R2.fastq.gz -S SAMPLE1.sam --summary-file summary/SAMPLE1.txt
+580042 reads; of these:
+  580042 (100.00%) were paired; of these:
+    49702 (8.57%) aligned concordantly 0 times
+    525184 (90.54%) aligned concordantly exactly 1 time
+    5156 (0.89%) aligned concordantly >1 times
+    ----
+    49702 pairs aligned concordantly 0 times; of these:
+      1358 (2.73%) aligned discordantly 1 time
+    ----
+    48344 pairs aligned 0 times concordantly or discordantly; of these:
+      96688 mates make up the pairs; of these:
+        49496 (51.19%) aligned 0 times
+        46162 (47.74%) aligned exactly 1 time
+        1030 (1.07%) aligned >1 times
+95.73% overall alignment rate
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ ls
+SAMPLE1.sam  final.sh  genome   samples
+SAMPLE2.sam  genes     indexes  summary
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ cd summary
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data/summary$ ls
+SAMPLE1.txt
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data/summary$ cd ..
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ hisat2 -p 8 --no-unal --dta -x indexes/chrX_tran -1 samples/SAMPLE2_R1.fastq.gz -2 samples/SAMPLE2_R2.fastq.gz -S SAMPLE2.sam --summary-file summary/SAMPLE2.txt
+843202 reads; of these:
+  843202 (100.00%) were paired; of these:
+    63894 (7.58%) aligned concordantly 0 times
+    771068 (91.45%) aligned concordantly exactly 1 time
+    8240 (0.98%) aligned concordantly >1 times
+    ----
+    63894 pairs aligned concordantly 0 times; of these:
+      2053 (3.21%) aligned discordantly 1 time
+    ----
+    61841 pairs aligned 0 times concordantly or discordantly; of these:
+      123682 mates make up the pairs; of these:
+        62496 (50.53%) aligned 0 times
+        59739 (48.30%) aligned exactly 1 time
+        1447 (1.17%) aligned >1 times
+96.29% overall alignment rate
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ cd summary
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data/summary$ ls
+SAMPLE1.txt  SAMPLE2.txt
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data/summary$ cd ..
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ ls
+SAMPLE1.sam  final.sh  genome   samples
+SAMPLE2.sam  genes     indexes  summary
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ samtools sort -@ 8 -o SAMPLE1.sorted.bam mapped_SAM/SAMPLE1.sam
+[E::hts_open_format] Failed to open file "mapped_SAM/SAMPLE1.sam" : No such file or directory
+samtools sort: can't open "mapped_SAM/SAMPLE1.sam": No such file or directory
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ hisat2 -p 8 --no-unal --dta -x indexes/chrX_tran -1 samples/SAMPLE2_R1.fastq.gz -2 samples/SAMPLE2_R2.fastq.gz -S mapped_SAM/SAMPLE2.sam --summary-file summary/SAMPLE2.txt
+(ERR): Could not open output file 'mapped_SAM/SAMPLE2.sam' for writing.
+Exiting now ...
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ samtools sort -@ 8 -o SAMPLE1.sorted.bam SAMPLE1.sam
+[bam_sort_core] merging from 0 files and 8 in-memory blocks...
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ ls
+SAMPLE1.sam         SAMPLE2.sam  genes   indexes  summary
+SAMPLE1.sorted.bam  final.sh     genome  samples
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ samtools sort -@ 8 -o SAMPLE2.sorted.bam SAMPLE2.sam
+[bam_sort_core] merging from 0 files and 8 in-memory blocks...
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ ls
+SAMPLE1.sam         SAMPLE2.sam         final.sh  genome   samples
+SAMPLE1.sorted.bam  SAMPLE2.sorted.bam  genes     indexes  summary
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ samtools index SAMPLE1.sorted.bam
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ ls
+SAMPLE1.sam             SAMPLE2.sam         genes    samples
+SAMPLE1.sorted.bam      SAMPLE2.sorted.bam  genome   summary
+SAMPLE1.sorted.bam.bai  final.sh            indexes
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ samtools index SAMPLE2.sorte
+d.bam
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ sudo apt install python3-pip
+[sudo] password for preetikayastha:
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  build-essential bzip2 cpp cpp-13 cpp-13-x86-64-linux-gnu
+  cpp-x86-64-linux-gnu dpkg-dev fakeroot g++ g++-13
+  g++-13-x86-64-linux-gnu g++-x86-64-linux-gnu gcc gcc-13 gcc-13-base
+  gcc-13-x86-64-linux-gnu gcc-x86-64-linux-gnu javascript-common
+  libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl
+  libaom3 libasan8 libatomic1 libc-bin libc-dev-bin libc-devtools libc6
+  libc6-dev libcc1-0 libcrypt-dev libde265-0 libdpkg-perl libexpat1
+  libexpat1-dev libfakeroot libfile-fcntllock-perl libgcc-13-dev libgd3
+  libheif-plugin-aomdec libheif-plugin-aomenc libheif-plugin-libde265
+  libheif1 libhwasan0 libisl23 libitm1 libjs-jquery libjs-sphinxdoc
+  libjs-underscore liblsan0 libmpc3 libpython3-dev libpython3.12-dev
+  libpython3.12-minimal libpython3.12-stdlib libpython3.12t64 libquadmath0
+  libstdc++-13-dev libtsan2 libubsan1 linux-libc-dev locales
+  lto-disabled-list make manpages-dev python3-dev python3-wheel python3.12
+  python3.12-dev python3.12-minimal rpcsvc-proto zlib1g-dev
+Suggested packages:
+  bzip2-doc cpp-doc gcc-13-locales cpp-13-doc debian-keyring g++-multilib
+  g++-13-multilib gcc-13-doc gcc-multilib autoconf automake libtool flex
+  bison gdb gcc-doc gcc-13-multilib gdb-x86-64-linux-gnu apache2
+  | lighttpd | httpd glibc-doc libnss-nis libnss-nisplus bzr libgd-tools
+  libheif-plugin-x265 libheif-plugin-ffmpegdec libheif-plugin-jpegdec
+  libheif-plugin-jpegenc libheif-plugin-j2kdec libheif-plugin-j2kenc
+  libheif-plugin-rav1e libheif-plugin-svtenc libstdc++-13-doc make-doc
+  python3.12-venv python3.12-doc binfmt-support
+The following NEW packages will be installed:
+  build-essential bzip2 cpp cpp-13 cpp-13-x86-64-linux-gnu
+  cpp-x86-64-linux-gnu dpkg-dev fakeroot g++ g++-13
+  g++-13-x86-64-linux-gnu g++-x86-64-linux-gnu gcc gcc-13 gcc-13-base
+  gcc-13-x86-64-linux-gnu gcc-x86-64-linux-gnu javascript-common
+  libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl
+  libaom3 libasan8 libatomic1 libc-dev-bin libc-devtools libc6-dev
+  libcc1-0 libcrypt-dev libde265-0 libdpkg-perl libexpat1-dev libfakeroot
+  libfile-fcntllock-perl libgcc-13-dev libgd3 libheif-plugin-aomdec
+  libheif-plugin-aomenc libheif-plugin-libde265 libheif1 libhwasan0
+  libisl23 libitm1 libjs-jquery libjs-sphinxdoc libjs-underscore liblsan0
+  libmpc3 libpython3-dev libpython3.12-dev libquadmath0 libstdc++-13-dev
+  libtsan2 libubsan1 linux-libc-dev lto-disabled-list make manpages-dev
+  python3-dev python3-pip python3-wheel python3.12-dev rpcsvc-proto
+  zlib1g-dev
+The following packages will be upgraded:
+  libc-bin libc6 libexpat1 libpython3.12-minimal libpython3.12-stdlib
+  libpython3.12t64 locales python3.12 python3.12-minimal
+9 upgraded, 64 newly installed, 0 to remove and 128 not upgraded.
+Need to get 81.1 MB/97.6 MB of archives.
+After this operation, 285 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libc-dev-bin amd64 2.39-0ubuntu8.4 [20.4 kB]
+Ign:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libc-dev-bin amd64 2.39-0ubuntu8.4
+Err:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libc-dev-bin amd64 2.39-0ubuntu8.4
+  File has unexpected size (1259 != 20420). Mirror sync in progress? [IP: 34.216.241.111 443]
+Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-libc-dev amd64 6.8.0-55.57 [1795 kB]
+Ign:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-libc-dev amd64 6.8.0-55.57
+Err:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-libc-dev amd64 6.8.0-55.57
+  File has unexpected size (1255 != 1795492). Mirror sync in progress? [IP: 34.216.241.111 443]
+Get:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libcrypt-dev amd64 1:4.4.36-4build1 [112 kB]
+Err:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libcrypt-dev amd64 1:4.4.36-4build1
+  File has unexpected size (1267 != 111780). Mirror sync in progress? [IP: 34.216.241.111 443]
+  Hashes of expected file:
+   - SHA512:197fe64f9992f24a0d247e8adc34cdc445e387c3508eb75c1f0da6aaa9f7aad5772d5dd98b8e8bf6ecb6200b33e8553de912b532cf34ed6eafb99fccdbeb2dc0
+   - SHA256:2edff420ef80b4a3f3751e65c33423ef30e563122a58b759e4854ea8d84ba1b1
+   - SHA1:279fcf82c817343033a4b3cb64e052f816856b04 [weak]
+   - MD5Sum:34a3a80d3f366c43370c66d7a709be65 [weak]
+   - Filesize:111780 [weak]
+Get:4 http://archive.ubuntu.com/ubuntu noble/main amd64 rpcsvc-proto amd64 1.4.2-0ubuntu7 [67.4 kB]
+Err:4 http://archive.ubuntu.com/ubuntu noble/main amd64 rpcsvc-proto amd64 1.4.2-0ubuntu7
+  File has unexpected size (1249 != 67446). Mirror sync in progress? [IP: 34.216.241.111 443]
+  Hashes of expected file:
+   - SHA512:5c770750979dd377ee82787bbe1a8b9af5ecf15cc2a9f2ac3864be6991cbad794d48696267661ccece487d548f22cc845259d3a20abf580d0e8bc21b571d96ac
+   - SHA256:7eb710fe148d224c159ddec1ceb0ba53ead52a80a6793dcdae1474acf20d8f71
+   - SHA1:5d1c5bc81f2ba1763fb619bb84033eedfbe7bb1e [weak]
+   - MD5Sum:31d10cb81c6d61c4b97bfbdb926c0641 [weak]
+   - Filesize:67446 [weak]
+Get:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libc6-dev amd64 2.39-0ubuntu8.4 [2124 kB]
+Ign:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libc6-dev amd64 2.39-0ubuntu8.4
+Err:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libc6-dev amd64 2.39-0ubuntu8.4
+  File has unexpected size (1257 != 2123526). Mirror sync in progress? [IP: 34.216.241.111 443]
+Get:6 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13-base amd64 13.3.0-6ubuntu2~24.04 [51.5 kB]
+Ign:6 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13-base amd64 13.3.0-6ubuntu2~24.04
+Err:6 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13-base amd64 13.3.0-6ubuntu2~24.04
+  File has unexpected size (1271 != 51464). Mirror sync in progress? [IP: 34.216.241.111 443]
+Get:7 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libisl23 amd64 0.26-3build1.1 [680 kB]
+Err:7 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libisl23 amd64 0.26-3build1.1
+  File has unexpected size (1251 != 679812). Mirror sync in progress? [IP: 34.216.241.111 443]
+  Hashes of expected file:
+   - SHA512:68329e34bf009a1d307d9a87c6446883462ec0c31124994d75dc9a07052e40c8663bbcc4147bc44808ccf3824b8dae589964cd32fe207943c54ea3bdd10fcef4
+   - SHA256:4e040926e50fb961fae9bf95660189d468336a4a17bc321872c434fc8f777e7f
+   - SHA1:8705d3041c6b4fab1ef9c89cde0e00c8cc778177 [weak]
+   - MD5Sum:93f4a3df0c6f95935bb4f9a548000000 [weak]
+   - Filesize:679812 [weak]
+Get:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libmpc3 amd64 1.3.1-1build1.1 [54.6 kB]
+Err:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libmpc3 amd64 1.3.1-1build1.1
+  File has unexpected size (1257 != 54636). Mirror sync in progress? [IP: 34.216.241.111 443]
+  Hashes of expected file:
+   - SHA512:3caaa7bd62d7503f10604827b2804c2c50346b27a491782bb59692089b45ea55f17168a50dd972cab5654c746a14aa579eee3c61eaaa22abdd2f6557c26e9966
+   - SHA256:cebe6098bb3d66fdacac9dc6fe406a651216d9c00f27c3f9c159d15d96cdf864
+   - SHA1:89c22b365d69c425e7a63e0f8d9f52c5c24ee36e [weak]
+   - MD5Sum:36ce14e1f799c7a465b92d59b4869b1d [weak]
+   - Filesize:54636 [weak]
+Get:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 cpp-13-x86-64-linux-gnu amd64 13.3.0-6ubuntu2~24.04 [10.7 MB]
+Ign:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 cpp-13-x86-64-linux-gnu amd64 13.3.0-6ubuntu2~24.04
+Err:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 cpp-13-x86-64-linux-gnu amd64 13.3.0-6ubuntu2~24.04
+  File has unexpected size (1299 != 10718702). Mirror sync in progress? [IP: 34.216.241.111 443]
+Get:10 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 cpp-13 amd64 13.3.0-6ubuntu2~24.04 [1038 B]
+Ign:10 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 cpp-13 amd64 13.3.0-6ubuntu2~24.04
+Err:10 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 cpp-13 amd64 13.3.0-6ubuntu2~24.04
+  File has unexpected size (1267 != 1038). Mirror sync in progress? [IP: 34.216.241.111 443]
+Get:11 http://archive.ubuntu.com/ubuntu noble/main amd64 cpp-x86-64-linux-gnu amd64 4:13.2.0-7ubuntu1 [5326 B]
+Err:11 http://archive.ubuntu.com/ubuntu noble/main amd64 cpp-x86-64-linux-gnu amd64 4:13.2.0-7ubuntu1
+  File has unexpected size (1283 != 5326). Mirror sync in progress? [IP: 34.216.241.111 443]
+  Hashes of expected file:
+   - SHA512:e90481cbc4a6e8172a40720705742752023853358a3b6f1e4b64c478374bbf0ceb1b6bcf1e1d887940666d4a04f1f440522c5376989ea7ba6955bb5624dcb5f4
+   - SHA256:85059b30960de3582e8612740614da3dfe47241d0368a28dea686188cf7648dd
+   - SHA1:8b591cc1fdcf702ca87157f5722f2dc268082228 [weak]
+   - MD5Sum:04efa16a0bede556fc57e47b177013e6 [weak]
+   - Filesize:5326 [weak]
+Get:12 http://archive.ubuntu.com/ubuntu noble/main amd64 cpp amd64 4:13.2.0-7ubuntu1 [22.4 kB]
+Err:12 http://archive.ubuntu.com/ubuntu noble/main amd64 cpp amd64 4:13.2.0-7ubuntu1
+  File has unexpected size (1259 != 22442). Mirror sync in progress? [IP: 34.216.241.111 443]
+  Hashes of expected file:
+   - SHA512:5fcc8f58e4e49b2d280f75671203293d6a6eec996964e01bee9f1ae128adf96ec6b9646146b3e00d478bbcbe5ea43d793aad76c14070bc4d0bf285c89596b3af
+   - SHA256:b51f8094760f7b41afdcb1fe1b5a57fc64b75a090859918af17450a10f8c7d31
+   - SHA1:c1e8e3ac068ceca2c3c7806d79784af51a088ace [weak]
+   - MD5Sum:f72d46f22f852cf329a19a3b6c0ef7f9 [weak]
+   - Filesize:22442 [weak]
+Get:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcc1-0 amd64 14.2.0-4ubuntu2~24.04 [48.0 kB]
+Ign:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcc1-0 amd64 14.2.0-4ubuntu2~24.04
+Err:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcc1-0 amd64 14.2.0-4ubuntu2~24.04
+  File has unexpected size (1271 != 48000). Mirror sync in progress? [IP: 34.216.241.111 443]
+Get:14 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libitm1 amd64 14.2.0-4ubuntu2~24.04 [29.7 kB]
+Ign:14 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libitm1 amd64 14.2.0-4ubuntu2~24.04
+Err:14 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libitm1 amd64 14.2.0-4ubuntu2~24.04
+  File has unexpected size (1271 != 29714). Mirror sync in progress? [IP: 34.216.241.111 443]
+Get:15 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libatomic1 amd64 14.2.0-4ubuntu2~24.04 [10.5 kB]
+Ign:15 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libatomic1 amd64 14.2.0-4ubuntu2~24.04
+Err:15 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libatomic1 amd64 14.2.0-4ubuntu2~24.04
+  File has unexpected size (1275 != 10464). Mirror sync in progress? [IP: 34.216.241.111 443]
+Get:16 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libasan8 amd64 14.2.0-4ubuntu2~24.04 [3031 kB]
+Ign:16 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libasan8 amd64 14.2.0-4ubuntu2~24.04
+Err:16 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libasan8 amd64 14.2.0-4ubuntu2~24.04
+  File has unexpected size (1273 != 3031254). Mirror sync in progress? [IP: 34.216.241.111 443]
+Get:17 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 liblsan0 amd64 14.2.0-4ubuntu2~24.04 [1322 kB]
+Ign:17 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 liblsan0 amd64 14.2.0-4ubuntu2~24.04
+Err:17 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 liblsan0 amd64 14.2.0-4ubuntu2~24.04
+  File has unexpected size (1273 != 1321642). Mirror sync in progress? [IP: 34.216.241.111 443]
+Get:18 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libtsan2 amd64 14.2.0-4ubuntu2~24.04 [2772 kB]
+Ign:18 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libtsan2 amd64 14.2.0-4ubuntu2~24.04
+Err:18 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libtsan2 amd64 14.2.0-4ubuntu2~24.04
+  File has unexpected size (1273 != 2772188). Mirror sync in progress? [IP: 34.216.241.111 443]
+Get:19 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libubsan1 amd64 14.2.0-4ubuntu2~24.04 [1184 kB]
+Ign:19 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libubsan1 amd64 14.2.0-4ubuntu2~24.04
+Err:19 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libubsan1 amd64 14.2.0-4ubuntu2~24.04
+  File has unexpected size (1273 != 1183700). Mirror sync in progress? [IP: 34.216.241.111 443]
+Get:20 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libhwasan0 amd64 14.2.0-4ubuntu2~24.04 [1641 kB]
+Ign:20 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libhwasan0 amd64 14.2.0-4ubuntu2~24.04
+Err:20 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libhwasan0 amd64 14.2.0-4ubuntu2~24.04
+  File has unexpected size (1275 != 1640658). Mirror sync in progress? [IP: 34.216.241.111 443]
+Get:21 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libquadmath0 amd64 14.2.0-4ubuntu2~24.04 [153 kB]
+Ign:21 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libquadmath0 amd64 14.2.0-4ubuntu2~24.04
+Get:22 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgcc-13-dev amd64 13.3.0-6ubuntu2~24.04 [2681 kB]
+Ign:22 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgcc-13-dev amd64 13.3.0-6ubuntu2~24.04
+Err:21 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libquadmath0 amd64 14.2.0-4ubuntu2~24.04
+  File has unexpected size (1281 != 153340). Mirror sync in progress? [IP: 34.216.241.111 443]
+Err:22 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgcc-13-dev amd64 13.3.0-6ubuntu2~24.04
+  File has unexpected size (1273 != 2681168). Mirror sync in progress? [IP: 34.216.241.111 443]
+Get:23 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13-x86-64-linux-gnu amd64 13.3.0-6ubuntu2~24.04 [21.1 MB]
+Ign:23 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13-x86-64-linux-gnu amd64 13.3.0-6ubuntu2~24.04
+Err:23 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13-x86-64-linux-gnu amd64 13.3.0-6ubuntu2~24.04
+  File has unexpected size (1291 != 21089252). Mirror sync in progress? [IP: 34.216.241.111 443]
+Get:24 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13 amd64 13.3.0-6ubuntu2~24.04 [494 kB]
+Ign:24 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13 amd64 13.3.0-6ubuntu2~24.04
+Err:24 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13 amd64 13.3.0-6ubuntu2~24.04
+  File has unexpected size (1263 != 494268). Mirror sync in progress? [IP: 34.216.241.111 443]
+Get:25 http://archive.ubuntu.com/ubuntu noble/main amd64 gcc-x86-64-linux-gnu amd64 4:13.2.0-7ubuntu1 [1212 B]
+Err:25 http://archive.ubuntu.com/ubuntu noble/main amd64 gcc-x86-64-linux-gnu amd64 4:13.2.0-7ubuntu1
+  File has unexpected size (1279 != 1212). Mirror sync in progress? [IP: 34.216.241.111 443]
+  Hashes of expected file:
+   - SHA512:381168fe720810d1fcd7209cd1e5af232cceb7c878b0b9c651741e0f1ab9f13276acb84a4852372ba1e35eea435b154ea6bbe321bd4cc2d8bd9fb6a7579df7ba
+   - SHA256:72e79089a10e381360bfc6f03c5e5d8c2ff177d6dbac2cd7ffb3cc1383f57591
+   - SHA1:81c541135db1754e53997a93bb0164bfb0c56e95 [weak]
+   - MD5Sum:af59c96cc615e43d008e83a3c08f7680 [weak]
+   - Filesize:1212 [weak]
+Get:26 http://archive.ubuntu.com/ubuntu noble/main amd64 gcc amd64 4:13.2.0-7ubuntu1 [5018 B]
+Err:26 http://archive.ubuntu.com/ubuntu noble/main amd64 gcc amd64 4:13.2.0-7ubuntu1
+  File has unexpected size (1255 != 5018). Mirror sync in progress? [IP: 34.216.241.111 443]
+  Hashes of expected file:
+   - SHA512:c9c4d8ae24c8f4874fa683cd4d8ce838f535fa93f0fe3c62a4a5756c7f67cda3aa54b2f06fc93f0e16043dbaa492991d4021c399b416484d23fea5adb2331fa8
+   - SHA256:0e0bb8b25153ed1c44ab92bc219eed469fcb5820c5c0bc6454b2fd366a33d3ee
+   - SHA1:b6150fa125f72cb4def0019856f47547f6729477 [weak]
+   - MD5Sum:7799273d32d97051db0f5e19922b1ca1 [weak]
+   - Filesize:5018 [weak]
+Get:27 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libstdc++-13-dev amd64 13.3.0-6ubuntu2~24.04 [2420 kB]
+Ign:27 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libstdc++-13-dev amd64 13.3.0-6ubuntu2~24.04
+Err:27 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libstdc++-13-dev amd64 13.3.0-6ubuntu2~24.04
+  File has unexpected size (1289 != 2419924). Mirror sync in progress? [IP: 34.216.241.111 443]
+Get:28 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 g++-13-x86-64-linux-gnu amd64 13.3.0-6ubuntu2~24.04 [12.2 MB]
+Ign:28 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 g++-13-x86-64-linux-gnu amd64 13.3.0-6ubuntu2~24.04
+Err:28 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 g++-13-x86-64-linux-gnu amd64 13.3.0-6ubuntu2~24.04
+  File has unexpected size (1305 != 12161784). Mirror sync in progress? [IP: 34.216.241.111 443]
+Get:29 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 g++-13 amd64 13.3.0-6ubuntu2~24.04 [16.1 kB]
+Ign:29 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 g++-13 amd64 13.3.0-6ubuntu2~24.04
+Err:29 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 g++-13 amd64 13.3.0-6ubuntu2~24.04
+  File has unexpected size (1275 != 16050). Mirror sync in progress? [IP: 34.216.241.111 443]
+Get:30 http://archive.ubuntu.com/ubuntu noble/main amd64 g++-x86-64-linux-gnu amd64 4:13.2.0-7ubuntu1 [964 B]
+Err:30 http://archive.ubuntu.com/ubuntu noble/main amd64 g++-x86-64-linux-gnu amd64 4:13.2.0-7ubuntu1
+  File has unexpected size (1299 != 964). Mirror sync in progress? [IP: 34.216.241.111 443]
+  Hashes of expected file:
+   - SHA512:fd72413229ee7971eebffb6b35c019c68957c1b4418b71f237fc3d547442c3d58e2c5dced0c251ffc7133d18cdcdcf9848cf64d8bb80fd5d11284adf27fcc751
+   - SHA256:145b027a542db5b21f85d4f9e242f51c62c69914fc484adb3a4881ca8e2f3913
+   - SHA1:be4c451369de3b5daca3c1bfd5848e80ab25f50c [weak]
+   - MD5Sum:3feff3bd101dbaed66782d86fecb82e0 [weak]
+   - Filesize:964 [weak]
+Get:31 http://archive.ubuntu.com/ubuntu noble/main amd64 g++ amd64 4:13.2.0-7ubuntu1 [1100 B]
+Err:31 http://archive.ubuntu.com/ubuntu noble/main amd64 g++ amd64 4:13.2.0-7ubuntu1
+  File has unexpected size (1271 != 1100). Mirror sync in progress? [IP: 34.216.241.111 443]
+  Hashes of expected file:
+   - SHA512:5472831c47bd1bd163b72b1dcb253e081c0ecb724ea515548f8da4f0699f11fcf54bf8c33ab1e7f6f8a60d52f574662a9d0d5c945de188d3cde4dd4bab30145b
+   - SHA256:800a84b369c64b18d65f0fb5c1533de0446c880ee4f1cadad64e3363327f63f0
+   - SHA1:5fcf86dcc889a95ea95eec433f7c01f59e946271 [weak]
+   - MD5Sum:4ad944aa44dc1e47976a60d89b854334 [weak]
+   - Filesize:1100 [weak]
+Get:32 http://archive.ubuntu.com/ubuntu noble/main amd64 make amd64 4.3-4.1build2 [180 kB]
+Err:32 http://archive.ubuntu.com/ubuntu noble/main amd64 make amd64 4.3-4.1build2
+  File has unexpected size (1255 != 179752). Mirror sync in progress? [IP: 34.216.241.111 443]
+  Hashes of expected file:
+   - SHA512:3294c784a9900c494e1a9f49188aa12bf1ccf74dda5cf0930495e880fe83c0c68401aaf2ce1d42fd36b13d4af720f97910fe9b43128d3e4d769269412981a58e
+   - SHA256:1fe6a815b56c7b6e9ce4086a363f09444bbd0a0d30e230c453d0b78e44b57a99
+   - SHA1:c9ab7c7949c68820cf113cd3718bfff53edbf628 [weak]
+   - MD5Sum:c7d04f7402e6979c2f3d3f1ebed316f6 [weak]
+   - Filesize:179752 [weak]
+Get:33 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdpkg-perl all 1.22.6ubuntu6.1 [269 kB]
+Ign:33 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdpkg-perl all 1.22.6ubuntu6.1
+Err:33 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdpkg-perl all 1.22.6ubuntu6.1
+  File has unexpected size (1255 != 268530). Mirror sync in progress? [IP: 34.216.241.111 443]
+Get:34 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 bzip2 amd64 1.0.8-5.1build0.1 [34.5 kB]
+Err:34 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 bzip2 amd64 1.0.8-5.1build0.1
+  File has unexpected size (1251 != 34534). Mirror sync in progress? [IP: 34.216.241.111 443]
+  Hashes of expected file:
+   - SHA512:8d988415ba29c7f03eb66fe7689334e82ca8e0b4fffed20dd11f03af76e29a1645eb892adae8b2b6dbd580850e9d962344277f4493bb4a540380930aac63a384
+   - SHA256:71c02f8f7541a2a57f0f3545ee826ad9778e665c5c457f34aca9e71abdc1a22b
+   - SHA1:f37757af823e24e1c102a195f47458d2f6e709ac [weak]
+   - MD5Sum:2f7837e0e0695c408747a7d15b99ecb0 [weak]
+   - Filesize:34534 [weak]
+Get:35 http://archive.ubuntu.com/ubuntu noble/main amd64 lto-disabled-list all 47 [12.4 kB]
+Err:35 http://archive.ubuntu.com/ubuntu noble/main amd64 lto-disabled-list all 47
+  File has unexpected size (1239 != 12400). Mirror sync in progress? [IP: 34.216.241.111 443]
+  Hashes of expected file:
+   - SHA512:4c75a198a5826827c712a10ddcba84ecc522783e1e215cd4e61ab40a6178fbcd62f711d2b825cdb2500a74b90d89597fbc4ba854c4429e755165729886c8dc48
+   - SHA256:cac0f63c88188f376bb4df10a2af2b49a607bbef97a57db50ed58f678c21eee9
+   - SHA1:e425db866fc1a5f7fbff322d4f2132fa5577afe4 [weak]
+   - MD5Sum:3092b6a4881d38d0ee08ce8766cbcabb [weak]
+   - Filesize:12400 [weak]
+Get:36 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dpkg-dev all 1.22.6ubuntu6.1 [1074 kB]
+Ign:36 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dpkg-dev all 1.22.6ubuntu6.1
+Err:36 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dpkg-dev all 1.22.6ubuntu6.1
+  File has unexpected size (1249 != 1074268). Mirror sync in progress? [IP: 34.216.241.111 443]
+Get:37 http://archive.ubuntu.com/ubuntu noble/main amd64 build-essential amd64 12.10ubuntu1 [4928 B]
+Err:37 http://archive.ubuntu.com/ubuntu noble/main amd64 build-essential amd64 12.10ubuntu1
+  File has unexpected size (1255 != 4928). Mirror sync in progress? [IP: 34.216.241.111 443]
+  Hashes of expected file:
+   - SHA512:42b3ac4560118e11c2d88aea99d40faa7054f38d72086b4dfbc3bb222baf227d7326038e7f652e030ee30bf5cfdd570c7931fc8f19f40b7ce14a29ec340f27c2
+   - SHA256:9b2159b95a4c01937309783c7c8a6ec8dfbcb7ffd604951c9713ac52ee9c7268
+   - SHA1:fb88ce706d33862bcf5602dbd5c8206ff5a6aa27 [weak]
+   - MD5Sum:4d68ffae811efe26d2bbb7dea480f0e7 [weak]
+   - Filesize:4928 [weak]
+Get:38 http://archive.ubuntu.com/ubuntu noble/main amd64 libfakeroot amd64 1.33-1 [32.4 kB]
+Err:38 http://archive.ubuntu.com/ubuntu noble/main amd64 libfakeroot amd64 1.33-1
+  File has unexpected size (1243 != 32374). Mirror sync in progress? [IP: 34.216.241.111 443]
+  Hashes of expected file:
+   - SHA512:10486ff5a768d0588f5241c26caa191dac877a6dccff2c0680d10cc0ee7b38dc7c83de3e3fcfdd701257a6d4f156bab710576787f22ae64661037bb460d2a510
+   - SHA256:a78087f50586595375f850b4445261f7a47a83005b05ce521331929fab49df4b
+   - SHA1:bd9f80f026443682e3ed6def59971ea5b8c50f2e [weak]
+   - MD5Sum:79739dfb64488e1c132252566f19aca8 [weak]
+   - Filesize:32374 [weak]
+Get:39 http://archive.ubuntu.com/ubuntu noble/main amd64 fakeroot amd64 1.33-1 [67.2 kB]
+Err:39 http://archive.ubuntu.com/ubuntu noble/main amd64 fakeroot amd64 1.33-1
+  File has unexpected size (1235 != 67216). Mirror sync in progress? [IP: 34.216.241.111 443]
+  Hashes of expected file:
+   - SHA512:c1a9bab3fd02851c4eecda29443832d00b881649fa25f3c0458548cccde5e94969f06357d3ca15dc317622a4961daa6bc99df154c25c74e217ad303f564b2041
+   - SHA256:d58b7fc73f0b7ae8b9441b0aa41e44ead0d7e4deedf5aaf5696db182eac71031
+   - SHA1:c0312a38a726959e2b1d50d91217e5ba0d99a4f5 [weak]
+   - MD5Sum:581d4018bf4003027a505efcb419f938 [weak]
+   - Filesize:67216 [weak]
+Get:40 http://archive.ubuntu.com/ubuntu noble/main amd64 javascript-common all 11+nmu1 [5936 B]
+Err:40 http://archive.ubuntu.com/ubuntu noble/main amd64 javascript-common all 11+nmu1
+  File has unexpected size (1265 != 5936). Mirror sync in progress? [IP: 34.216.241.111 443]
+  Hashes of expected file:
+   - SHA512:0b0815a502cff95537f19a301cb508645051d3f667de6faf986497f543a0f2f6bd47fbbeccfc26044f698a3e6a947556679f383afcaebdd1a46ad3db4bda272d
+   - SHA256:5e0e49d84d2e6ef1204b0925576305c011d7c70f8d2e2122a1187bced33b36ef
+   - SHA1:41a318812e6daa3a8cf371a7787c5ed7bf06765b [weak]
+   - MD5Sum:37009b714e001758ba3f5505bbb14114 [weak]
+   - Filesize:5936 [weak]
+Get:41 http://archive.ubuntu.com/ubuntu noble/main amd64 libalgorithm-diff-perl all 1.201-1 [41.8 kB]
+Err:41 http://archive.ubuntu.com/ubuntu noble/main amd64 libalgorithm-diff-perl all 1.201-1
+  File has unexpected size (1265 != 41804). Mirror sync in progress? [IP: 34.216.241.111 443]
+  Hashes of expected file:
+   - SHA512:a2a88d7eb873a95c6234c1ff021327e8b62504f9d541f5346ba335b3cd372966af76c38e40eaa7b43fa1a4bd18587e73bb6e7d4632e23c33eea69e5a196c06eb
+   - SHA256:2920d81cf0ac368b2fc52b892bb731ce7ce624a2cf51badbd55f801ba75d076f
+   - SHA1:fc3b77caeb2e06e0c24a07bf70c68b4836d72821 [weak]
+   - MD5Sum:40c9245c939e970765c140f16d609cce [weak]
+   - Filesize:41804 [weak]
+Get:42 http://archive.ubuntu.com/ubuntu noble/main amd64 libalgorithm-diff-xs-perl amd64 0.04-8build3 [11.2 kB]
+Err:42 http://archive.ubuntu.com/ubuntu noble/main amd64 libalgorithm-diff-xs-perl amd64 0.04-8build3
+  File has unexpected size (1289 != 11176). Mirror sync in progress? [IP: 34.216.241.111 443]
+  Hashes of expected file:
+   - SHA512:8e44ab19848fa53d61b42f6b25e8f834677b8daf25527fcaed263abc448ba321468c90347655f3cd865813100791170184502e9d3b8cf5e831091ff80dcad1cd
+   - SHA256:be7d854fbc6bbe48bc1f0bd0bb66cfe27c9dca8b3037aa253394e88300f1d1a6
+   - SHA1:32dad2b8ee90bc137c5ace27fcbd93d30b390510 [weak]
+   - MD5Sum:e11dfb40273bd319c527b0f54a2c51df [weak]
+   - Filesize:11176 [weak]
+Get:43 http://archive.ubuntu.com/ubuntu noble/main amd64 libalgorithm-merge-perl all 0.08-5 [11.4 kB]
+Err:43 http://archive.ubuntu.com/ubuntu noble/main amd64 libalgorithm-merge-perl all 0.08-5
+  File has unexpected size (1259 != 11382). Mirror sync in progress? [IP: 34.216.241.111 443]
+  Hashes of expected file:
+   - SHA512:a9bba4cca2349a26ef49e46a0d81cbdce2f3e0656ae4e039063ceee54f03dcab24df733c14c0690ab6e02bd698ed41fa0ac31bd9adc938259e2a59e223aab205
+   - SHA256:0ede1dbc3f899353bea903e071dbc86eb94bf90bc0d4fd626dbe6adb12b5db33
+   - SHA1:daef6947fd5496c116456e68d9d633463a6d5c78 [weak]
+   - MD5Sum:8a3beaed0f64ebce668caa459f85f785 [weak]
+   - Filesize:11382 [weak]
+Get:44 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libaom3 amd64 3.8.2-2ubuntu0.1 [1941 kB]
+Ign:44 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libaom3 amd64 3.8.2-2ubuntu0.1
+Err:44 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libaom3 amd64 3.8.2-2ubuntu0.1
+  File has unexpected size (1251 != 1941114). Mirror sync in progress? [IP: 34.216.241.111 443]
+Get:45 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libheif-plugin-aomdec amd64 1.17.6-1ubuntu4.1 [10.4 kB]
+Ign:45 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libheif-plugin-aomdec amd64 1.17.6-1ubuntu4.1
+Err:45 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libheif-plugin-aomdec amd64 1.17.6-1ubuntu4.1
+  File has unexpected size (1273 != 10412). Mirror sync in progress? [IP: 34.216.241.111 443]
+Get:46 http://archive.ubuntu.com/ubuntu noble/main amd64 libde265-0 amd64 1.0.15-1build3 [166 kB]
+Err:46 http://archive.ubuntu.com/ubuntu noble/main amd64 libde265-0 amd64 1.0.15-1build3
+  File has unexpected size (1255 != 166212). Mirror sync in progress? [IP: 34.216.241.111 443]
+  Hashes of expected file:
+   - SHA512:8f4f1e1ed064f891ce29423406c5219d8303e1a5e147d51cdc4050ef93fd24bd115c1185cb873e107bb8fdcc16f6b9022c1957504f517d5dd43b613ffa4a531b
+   - SHA256:3b8cb1fb70933261d076d1b2882fb303aa8da1a951ad7614234f890468c90310
+   - SHA1:bdc190026acac4ac708938cb40e16b32c3bfe569 [weak]
+   - MD5Sum:42eb4971a499185e525e1bc6e4339a9c [weak]
+   - Filesize:166212 [weak]
+Get:47 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libheif-plugin-libde265 amd64 1.17.6-1ubuntu4.1 [8176 B]
+Ign:47 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libheif-plugin-libde265 amd64 1.17.6-1ubuntu4.1
+Err:47 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libheif-plugin-libde265 amd64 1.17.6-1ubuntu4.1
+  File has unexpected size (1275 != 8176). Mirror sync in progress? [IP: 34.216.241.111 443]
+Get:48 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libheif1 amd64 1.17.6-1ubuntu4.1 [275 kB]
+Ign:48 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libheif1 amd64 1.17.6-1ubuntu4.1
+Err:48 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libheif1 amd64 1.17.6-1ubuntu4.1
+  File has unexpected size (1255 != 275402). Mirror sync in progress? [IP: 34.216.241.111 443]
+Get:49 http://archive.ubuntu.com/ubuntu noble/main amd64 libgd3 amd64 2.3.3-9ubuntu5 [128 kB]
+Err:49 http://archive.ubuntu.com/ubuntu noble/main amd64 libgd3 amd64 2.3.3-9ubuntu5
+  File has unexpected size (1247 != 127506). Mirror sync in progress? [IP: 34.216.241.111 443]
+  Hashes of expected file:
+   - SHA512:5e22939839074c6c9dd3332f627c6605de3b228b378737151f6d9e7c27c32a13da9db73349f6af0299c77529206decb6b67e3aa2e97193f4287beeb712377804
+   - SHA256:dbef5ad99eec399fd6afeb6d0cc92d81a8b3295a7ac80ac71311ea09c49704ae
+   - SHA1:c0210739b24bbc37850e11b4be0916c8dc0f74d7 [weak]
+   - MD5Sum:104c2096f9b1602ee6e4c9a7dc6a5c20 [weak]
+   - Filesize:127506 [weak]
+Get:50 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libc-devtools amd64 2.39-0ubuntu8.4 [29.3 kB]
+Ign:50 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libc-devtools amd64 2.39-0ubuntu8.4
+Err:50 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libc-devtools amd64 2.39-0ubuntu8.4
+  File has unexpected size (1263 != 29342). Mirror sync in progress? [IP: 34.216.241.111 443]
+Get:51 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libexpat1-dev amd64 2.6.1-2ubuntu0.2 [998 kB]
+Ign:51 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libexpat1-dev amd64 2.6.1-2ubuntu0.2
+Err:51 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libexpat1-dev amd64 2.6.1-2ubuntu0.2
+  File has unexpected size (1257 != 998342). Mirror sync in progress? [IP: 34.216.241.111 443]
+Get:52 http://archive.ubuntu.com/ubuntu noble/main amd64 libfile-fcntllock-perl amd64 0.22-4ubuntu5 [30.7 kB]
+Err:52 http://archive.ubuntu.com/ubuntu noble/main amd64 libfile-fcntllock-perl amd64 0.22-4ubuntu5
+  File has unexpected size (1273 != 30666). Mirror sync in progress? [IP: 34.216.241.111 443]
+  Hashes of expected file:
+   - SHA512:6e2104e0dd7ee0b582dda68b8fb20ab2871fbaa3755a3653460109716ada333db64925c4a47d1db7617067d8d8743045e68878958ff26290b88b044dc1099189
+   - SHA256:01a1dddd874ba1aa70e6b6baf7206df0faa4e5dd4bdcbf9f1cd4e8ee1d8548d4
+   - SHA1:670b73301b2621317dc42fb6bbd06fa20fcb2a15 [weak]
+   - MD5Sum:1cec79129d6ec5afa6a73dddcf023df2 [weak]
+   - Filesize:30666 [weak]
+Get:53 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libheif-plugin-aomenc amd64 1.17.6-1ubuntu4.1 [14.7 kB]
+Ign:53 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libheif-plugin-aomenc amd64 1.17.6-1ubuntu4.1
+Err:53 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libheif-plugin-aomenc amd64 1.17.6-1ubuntu4.1
+  File has unexpected size (1273 != 14662). Mirror sync in progress? [IP: 34.216.241.111 443]
+Get:54 http://archive.ubuntu.com/ubuntu noble/main amd64 libjs-jquery all 3.6.1+dfsg+~3.5.14-1 [328 kB]
+Err:54 http://archive.ubuntu.com/ubuntu noble/main amd64 libjs-jquery all 3.6.1+dfsg+~3.5.14-1
+  File has unexpected size (1295 != 327720). Mirror sync in progress? [IP: 34.216.241.111 443]
+  Hashes of expected file:
+   - SHA512:21c28ec15d9269eef5615ad99d77f09dfeec88ef328a3c2b869300556d46c10a92e7b5a00e83f85cbe4b8eacca4db9e83ad3774a65f4cadff2e9f4670462a0aa
+   - SHA256:8cd2eccd9c73c78c8dfdc5394861c63645f7e114553f29b4d9f15628625d191d
+   - SHA1:d914f7d3b8eb3ec972e31ebb3f25071c2fad5cac [weak]
+   - MD5Sum:8a0fa1eaa400b699f1ab3b01aa4ffd5b [weak]
+   - Filesize:327720 [weak]
+Get:55 http://archive.ubuntu.com/ubuntu noble/main amd64 libjs-underscore all 1.13.4~dfsg+~1.11.4-3 [118 kB]
+Err:55 http://archive.ubuntu.com/ubuntu noble/main amd64 libjs-underscore all 1.13.4~dfsg+~1.11.4-3
+  File has unexpected size (1289 != 117876). Mirror sync in progress? [IP: 34.216.241.111 443]
+  Hashes of expected file:
+   - SHA512:3f54ba5608a781480d1139b00c56d8c46ad63845d0f48267a357126c9f5c98c5cfc78f10e97fe95c40b356f42c861e4a8305d8c1d83a5cd44c88c825fcc6d027
+   - SHA256:d5257b7b4aacb4ebfbe6deda3d672090b85674db457377084e47f12dcc63992b
+   - SHA1:daafd7d6539f6365424ed74510ea79606295f28e [weak]
+   - MD5Sum:fef398fcc563c32ee9cc981fae2e87ca [weak]
+   - Filesize:117876 [weak]
+Get:56 http://archive.ubuntu.com/ubuntu noble/main amd64 libjs-sphinxdoc all 7.2.6-6 [149 kB]
+Err:56 http://archive.ubuntu.com/ubuntu noble/main amd64 libjs-sphinxdoc all 7.2.6-6
+  File has unexpected size (1251 != 149488). Mirror sync in progress? [IP: 34.216.241.111 443]
+  Hashes of expected file:
+   - SHA512:a19e7cb2045078eccdea76900ca9beabc5fcd7ed0ccd858cefa7101ffb14889befc46d8a60a76d7c4d54366179ea12fc326f02482170eef77d8c02ac64df68fb
+   - SHA256:3221a4bbc32830cef39def2e20fce04c0af523463444f0bcf27ded153f7c4055
+   - SHA1:8afa1e089b98b3fd5998662e70cf29070ce84894 [weak]
+   - MD5Sum:d7127d4eeb43edad3ba60d3468a821e0 [weak]
+   - Filesize:149488 [weak]
+Get:57 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 zlib1g-dev amd64 1:1.3.dfsg-3.1ubuntu2.1 [894 kB]
+Err:57 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 zlib1g-dev amd64 1:1.3.dfsg-3.1ubuntu2.1
+  File has unexpected size (1267 != 894070). Mirror sync in progress? [IP: 34.216.241.111 443]
+  Hashes of expected file:
+   - SHA512:483cd5aedd87112b64a424ffaabeacd06858b12fdead46c28c3e8bb78c27a7d784c9c8caf50eb7a004aec22070cab0c5f348445b6dbdde48a758bdb10bff4199
+   - SHA256:023cbe9dbf0af87f10e54e342c67571874e412b9950d89c6cd7b010be2e67c3c
+   - SHA1:db99f57bd43c339d817cd1667a14e0bfb7ebe904 [weak]
+   - MD5Sum:846183422bf7d3afb066b27701002404 [weak]
+   - Filesize:894070 [weak]
+Get:58 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12-dev amd64 3.12.3-1ubuntu0.5 [5675 kB]
+Ign:58 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12-dev amd64 3.12.3-1ubuntu0.5
+Err:58 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12-dev amd64 3.12.3-1ubuntu0.5
+  File has unexpected size (1257 != 5675078). Mirror sync in progress? [IP: 34.216.241.111 443]
+Get:59 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3-dev amd64 3.12.3-0ubuntu2 [10.3 kB]
+Err:59 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3-dev amd64 3.12.3-0ubuntu2
+  File has unexpected size (1265 != 10296). Mirror sync in progress? [IP: 34.216.241.111 443]
+  Hashes of expected file:
+   - SHA512:d1a3c65da6aeb0ff639f01650e0a9b8c1c265cdf60446fea5c93f14dc4ae4666c7594227005ee5ab6a691ce2864c19e99b4e61de27ea7cdd4077eea282d8c128
+   - SHA256:8cc7b722b53955d092f3ff0975efb4f8c9e68157805e0603d1d997ff215b7ae0
+   - SHA1:b30f381d12bfa7eb2ca0718e4c0c3518dee7414d [weak]
+   - MD5Sum:44a9862f85877e0a73367b9a942705d4 [weak]
+   - Filesize:10296 [weak]
+Get:60 http://archive.ubuntu.com/ubuntu noble/main amd64 manpages-dev all 6.7-2 [2013 kB]
+Err:60 http://archive.ubuntu.com/ubuntu noble/main amd64 manpages-dev all 6.7-2
+  File has unexpected size (1241 != 2012606). Mirror sync in progress? [IP: 34.216.241.111 443]
+  Hashes of expected file:
+   - SHA512:b3ffa8f5095419f0b1e771a105389f846211a5a49f06c23b0a4eb37c7ba9bed60119381b0f27091a548187393a31f7c51011c6fdc0c161f2e2ac9e3534970ed4
+   - SHA256:fd5207cf3fdc59e380de1f7becbc74ec4e844d52740eb37ef813691688095496
+   - SHA1:1509fae995363539e1d66b838dccfc94f191ee0c [weak]
+   - MD5Sum:3d7e29eca8138536cc3ae43f3f6a9ef3 [weak]
+   - Filesize:2012606 [weak]
+Get:61 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3.12-dev amd64 3.12.3-1ubuntu0.5 [498 kB]
+Ign:61 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3.12-dev amd64 3.12.3-1ubuntu0.5
+Err:61 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3.12-dev amd64 3.12.3-1ubuntu0.5
+  File has unexpected size (1251 != 497932). Mirror sync in progress? [IP: 34.216.241.111 443]
+Get:62 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-dev amd64 3.12.3-0ubuntu2 [26.7 kB]
+Err:62 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-dev amd64 3.12.3-0ubuntu2
+  File has unexpected size (1257 != 26702). Mirror sync in progress? [IP: 34.216.241.111 443]
+  Hashes of expected file:
+   - SHA512:f36ea11d0a459d164578af4b7408e34e55e45d20e2b50f3bb723b535c540b80dfa14921722f671f1890a2fbbc96ec21e40405d4a7e9f1d4d64fe42ffb06e4d3a
+   - SHA256:87815bdf50a17494deb42c27ba56f517601b88f1a668046366a0d542830ac72c
+   - SHA1:17f640c904d9c62d8acba8d415aa0408d31ce3ae [weak]
+   - MD5Sum:5bf5335750ccc7583940189a37e65f04 [weak]
+   - Filesize:26702 [weak]
+Get:63 http://archive.ubuntu.com/ubuntu noble/universe amd64 python3-wheel all 0.42.0-2 [53.1 kB]
+Err:63 http://archive.ubuntu.com/ubuntu noble/universe amd64 python3-wheel all 0.42.0-2
+  File has unexpected size (1257 != 53052). Mirror sync in progress? [IP: 34.216.241.111 443]
+  Hashes of expected file:
+   - SHA512:450597e8e1559d5bc88a8bb0b62e9c46b36cf8965a1b3980220f3b7136a27d5845df91ab4167c0571f8ca689afce0b6514b1ae66aff22d6cf7a9a9902a6f01cb
+   - SHA256:e1a4076425d3d1f1772b11bff6a025055723b2d0a4972f9519849ddaa8cd3953
+   - SHA1:7991248f3d1ca0717b0071dbc096b30a5bbbb638 [weak]
+   - MD5Sum:e26307ee1d62ce9bdcbbe0d6f1876c00 [weak]
+   - Filesize:53052 [weak]
+Get:64 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 python3-pip all 24.0+dfsg-1ubuntu1.1 [1317 kB]
+Ign:64 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 python3-pip all 24.0+dfsg-1ubuntu1.1
+Err:64 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 python3-pip all 24.0+dfsg-1ubuntu1.1
+  File has unexpected size (1275 != 1316736). Mirror sync in progress? [IP: 34.216.241.111 443]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/g/glibc/libc-dev-bin_2.39-0ubuntu8.4_amd64.deb  File has unexpected size (1259 != 20420). Mirror sync in progress? [IP: 34.216.241.111 443]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux-libc-dev_6.8.0-55.57_amd64.deb  File has unexpected size (1255 != 1795492). Mirror sync in progress? [IP: 34.216.241.111 443]
+E: Failed to fetch https://uswest4.cloudguest.central.arubanetworks.com:443/portal/scope.cust-69dce7749f5f11eea1fb76de43d439f7/Expo/capture?cmd=login&mac=e0%3A2e%3A0b%3Aa0%3A2d%3Ae6&essid=Expo&ip=126.78.134.107&apname=Golden%20State%2012&apmac=50%3Ae4%3Ae0%3Acb%3Ac0%3A67&vcname=TC%20Ballroom%20C-2&switchip=securelogin.hpe.com&url=http%3A%2F%2Farchive.ubuntu.com%2Fubuntu%2Fpool%2Fmain%2Flibx%2Flibxcrypt%2Flibcrypt-dev_4.4.36-4build1_amd64.deb&nas-id=2bcc5647-3df1-4f0b-93e4-d7c9802dac39  File has unexpected size (1267 != 111780). Mirror sync in progress? [IP: 34.216.241.111 443]
+   Hashes of expected file:
+    - SHA512:197fe64f9992f24a0d247e8adc34cdc445e387c3508eb75c1f0da6aaa9f7aad5772d5dd98b8e8bf6ecb6200b33e8553de912b532cf34ed6eafb99fccdbeb2dc0
+    - SHA256:2edff420ef80b4a3f3751e65c33423ef30e563122a58b759e4854ea8d84ba1b1
+    - SHA1:279fcf82c817343033a4b3cb64e052f816856b04 [weak]
+    - MD5Sum:34a3a80d3f366c43370c66d7a709be65 [weak]
+    - Filesize:111780 [weak]
+E: Failed to fetch https://uswest4.cloudguest.central.arubanetworks.com:443/portal/scope.cust-69dce7749f5f11eea1fb76de43d439f7/Expo/capture?cmd=login&mac=e0%3A2e%3A0b%3Aa0%3A2d%3Ae6&essid=Expo&ip=126.78.134.107&apname=Golden%20State%2012&apmac=50%3Ae4%3Ae0%3Acb%3Ac0%3A67&vcname=TC%20Ballroom%20C-2&switchip=securelogin.hpe.com&url=http%3A%2F%2Farchive.ubuntu.com%2Fubuntu%2Fpool%2Fmain%2Fr%2Frpcsvc-proto%2Frpcsvc-proto_1.4.2-0ubuntu7_amd64.deb&nas-id=2bcc5647-3df1-4f0b-93e4-d7c9802dac39  File has unexpected size (1249 != 67446). Mirror sync in progress? [IP: 34.216.241.111 443]
+   Hashes of expected file:
+    - SHA512:5c770750979dd377ee82787bbe1a8b9af5ecf15cc2a9f2ac3864be6991cbad794d48696267661ccece487d548f22cc845259d3a20abf580d0e8bc21b571d96ac
+    - SHA256:7eb710fe148d224c159ddec1ceb0ba53ead52a80a6793dcdae1474acf20d8f71
+    - SHA1:5d1c5bc81f2ba1763fb619bb84033eedfbe7bb1e [weak]
+    - MD5Sum:31d10cb81c6d61c4b97bfbdb926c0641 [weak]
+    - Filesize:67446 [weak]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/g/glibc/libc6-dev_2.39-0ubuntu8.4_amd64.deb  File has unexpected size (1257 != 2123526). Mirror sync in progress? [IP: 34.216.241.111 443]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/g/gcc-13/gcc-13-base_13.3.0-6ubuntu2%7e24.04_amd64.deb  File has unexpected size (1271 != 51464). Mirror sync in progress? [IP: 34.216.241.111 443]
+E: Failed to fetch https://uswest4.cloudguest.central.arubanetworks.com:443/portal/scope.cust-69dce7749f5f11eea1fb76de43d439f7/Expo/capture?cmd=login&mac=e0%3A2e%3A0b%3Aa0%3A2d%3Ae6&essid=Expo&ip=126.78.134.107&apname=Golden%20State%2012&apmac=50%3Ae4%3Ae0%3Acb%3Ac0%3A67&vcname=TC%20Ballroom%20C-2&switchip=securelogin.hpe.com&url=http%3A%2F%2Farchive.ubuntu.com%2Fubuntu%2Fpool%2Fmain%2Fi%2Fisl%2Flibisl23_0.26-3build1.1_amd64.deb&nas-id=2bcc5647-3df1-4f0b-93e4-d7c9802dac39  File has unexpected size (1251 != 679812). Mirror sync in progress? [IP: 34.216.241.111 443]
+   Hashes of expected file:
+    - SHA512:68329e34bf009a1d307d9a87c6446883462ec0c31124994d75dc9a07052e40c8663bbcc4147bc44808ccf3824b8dae589964cd32fe207943c54ea3bdd10fcef4
+    - SHA256:4e040926e50fb961fae9bf95660189d468336a4a17bc321872c434fc8f777e7f
+    - SHA1:8705d3041c6b4fab1ef9c89cde0e00c8cc778177 [weak]
+    - MD5Sum:93f4a3df0c6f95935bb4f9a548000000 [weak]
+    - Filesize:679812 [weak]
+E: Failed to fetch https://uswest4.cloudguest.central.arubanetworks.com:443/portal/scope.cust-69dce7749f5f11eea1fb76de43d439f7/Expo/capture?cmd=login&mac=e0%3A2e%3A0b%3Aa0%3A2d%3Ae6&essid=Expo&ip=126.78.134.107&apname=Golden%20State%2012&apmac=50%3Ae4%3Ae0%3Acb%3Ac0%3A67&vcname=TC%20Ballroom%20C-2&switchip=securelogin.hpe.com&url=http%3A%2F%2Farchive.ubuntu.com%2Fubuntu%2Fpool%2Fmain%2Fm%2Fmpclib3%2Flibmpc3_1.3.1-1build1.1_amd64.deb&nas-id=2bcc5647-3df1-4f0b-93e4-d7c9802dac39  File has unexpected size (1257 != 54636). Mirror sync in progress? [IP: 34.216.241.111 443]
+   Hashes of expected file:
+    - SHA512:3caaa7bd62d7503f10604827b2804c2c50346b27a491782bb59692089b45ea55f17168a50dd972cab5654c746a14aa579eee3c61eaaa22abdd2f6557c26e9966
+    - SHA256:cebe6098bb3d66fdacac9dc6fe406a651216d9c00f27c3f9c159d15d96cdf864
+    - SHA1:89c22b365d69c425e7a63e0f8d9f52c5c24ee36e [weak]
+    - MD5Sum:36ce14e1f799c7a465b92d59b4869b1d [weak]
+    - Filesize:54636 [weak]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/g/gcc-13/cpp-13-x86-64-linux-gnu_13.3.0-6ubuntu2%7e24.04_amd64.deb  File has unexpected size (1299 != 10718702). Mirror sync in progress? [IP: 34.216.241.111 443]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/g/gcc-13/cpp-13_13.3.0-6ubuntu2%7e24.04_amd64.deb  File has unexpected size (1267 != 1038). Mirror sync inprogress? [IP: 34.216.241.111 443]
+E: Failed to fetch https://uswest4.cloudguest.central.arubanetworks.com:443/portal/scope.cust-69dce7749f5f11eea1fb76de43d439f7/Expo/capture?cmd=login&mac=e0%3A2e%3A0b%3Aa0%3A2d%3Ae6&essid=Expo&ip=126.78.134.107&apname=Golden%20State%2012&apmac=50%3Ae4%3Ae0%3Acb%3Ac0%3A67&vcname=TC%20Ballroom%20C-2&switchip=securelogin.hpe.com&url=http%3A%2F%2Farchive.ubuntu.com%2Fubuntu%2Fpool%2Fmain%2Fg%2Fgcc-defaults%2Fcpp-x86-64-linux-gnu_13.2.0-7ubuntu1_amd64.deb&nas-id=2bcc5647-3df1-4f0b-93e4-d7c9802dac39  File has unexpected size (1283 != 5326). Mirror sync in progress? [IP: 34.216.241.111 443]
+   Hashes of expected file:
+    - SHA512:e90481cbc4a6e8172a40720705742752023853358a3b6f1e4b64c478374bbf0ceb1b6bcf1e1d887940666d4a04f1f440522c5376989ea7ba6955bb5624dcb5f4
+    - SHA256:85059b30960de3582e8612740614da3dfe47241d0368a28dea686188cf7648dd
+    - SHA1:8b591cc1fdcf702ca87157f5722f2dc268082228 [weak]
+    - MD5Sum:04efa16a0bede556fc57e47b177013e6 [weak]
+    - Filesize:5326 [weak]
+E: Failed to fetch https://uswest4.cloudguest.central.arubanetworks.com:443/portal/scope.cust-69dce7749f5f11eea1fb76de43d439f7/Expo/capture?cmd=login&mac=e0%3A2e%3A0b%3Aa0%3A2d%3Ae6&essid=Expo&ip=126.78.134.107&apname=Golden%20State%2012&apmac=50%3Ae4%3Ae0%3Acb%3Ac0%3A67&vcname=TC%20Ballroom%20C-2&switchip=securelogin.hpe.com&url=http%3A%2F%2Farchive.ubuntu.com%2Fubuntu%2Fpool%2Fmain%2Fg%2Fgcc-defaults%2Fcpp_13.2.0-7ubuntu1_amd64.deb&nas-id=2bcc5647-3df1-4f0b-93e4-d7c9802dac39  File has unexpected size (1259 != 22442). Mirror sync in progress? [IP: 34.216.241.111 443]
+   Hashes of expected file:
+    - SHA512:5fcc8f58e4e49b2d280f75671203293d6a6eec996964e01bee9f1ae128adf96ec6b9646146b3e00d478bbcbe5ea43d793aad76c14070bc4d0bf285c89596b3af
+    - SHA256:b51f8094760f7b41afdcb1fe1b5a57fc64b75a090859918af17450a10f8c7d31
+    - SHA1:c1e8e3ac068ceca2c3c7806d79784af51a088ace [weak]
+    - MD5Sum:f72d46f22f852cf329a19a3b6c0ef7f9 [weak]
+    - Filesize:22442 [weak]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/g/gcc-14/libcc1-0_14.2.0-4ubuntu2%7e24.04_amd64.deb  File has unexpected size (1271 != 48000). Mirror syncin progress? [IP: 34.216.241.111 443]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/g/gcc-14/libitm1_14.2.0-4ubuntu2%7e24.04_amd64.deb  File has unexpected size (1271 != 29714). Mirror sync in progress? [IP: 34.216.241.111 443]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/g/gcc-14/libatomic1_14.2.0-4ubuntu2%7e24.04_amd64.deb  File has unexpected size (1275 != 10464). Mirror sync in progress? [IP: 34.216.241.111 443]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/g/gcc-14/libasan8_14.2.0-4ubuntu2%7e24.04_amd64.deb  File has unexpected size (1273 != 3031254). Mirror sync in progress? [IP: 34.216.241.111 443]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/g/gcc-14/liblsan0_14.2.0-4ubuntu2%7e24.04_amd64.deb  File has unexpected size (1273 != 1321642). Mirror sync in progress? [IP: 34.216.241.111 443]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/g/gcc-14/libtsan2_14.2.0-4ubuntu2%7e24.04_amd64.deb  File has unexpected size (1273 != 2772188). Mirror sync in progress? [IP: 34.216.241.111 443]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/g/gcc-14/libubsan1_14.2.0-4ubuntu2%7e24.04_amd64.deb  File has unexpected size (1273 != 1183700). Mirror sync in progress? [IP: 34.216.241.111 443]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/g/gcc-14/libhwasan0_14.2.0-4ubuntu2%7e24.04_amd64.deb  File has unexpected size (1275 != 1640658). Mirror sync in progress? [IP: 34.216.241.111 443]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/g/gcc-14/libquadmath0_14.2.0-4ubuntu2%7e24.04_amd64.deb  File has unexpected size (1281 != 153340). Mirrorsync in progress? [IP: 34.216.241.111 443]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/g/gcc-13/libgcc-13-dev_13.3.0-6ubuntu2%7e24.04_amd64.deb  File has unexpected size (1273 != 2681168). Mirror sync in progress? [IP: 34.216.241.111 443]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/g/gcc-13/gcc-13-x86-64-linux-gnu_13.3.0-6ubuntu2%7e24.04_amd64.deb  File has unexpected size (1291 != 21089252). Mirror sync in progress? [IP: 34.216.241.111 443]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/g/gcc-13/gcc-13_13.3.0-6ubuntu2%7e24.04_amd64.deb  File has unexpected size (1263 != 494268). Mirror sync in progress? [IP: 34.216.241.111 443]
+E: Failed to fetch https://uswest4.cloudguest.central.arubanetworks.com:443/portal/scope.cust-69dce7749f5f11eea1fb76de43d439f7/Expo/capture?cmd=login&mac=e0%3A2e%3A0b%3Aa0%3A2d%3Ae6&essid=Expo&ip=126.78.134.107&apname=Golden%20State%2012&apmac=50%3Ae4%3Ae0%3Acb%3Ac0%3A67&vcname=TC%20Ballroom%20C-2&switchip=securelogin.hpe.com&url=http%3A%2F%2Farchive.ubuntu.com%2Fubuntu%2Fpool%2Fmain%2Fg%2Fgcc-defaults%2Fgcc-x86-64-linux-gnu_13.2.0-7ubuntu1_amd64.deb&nas-id=2bcc5647-3df1-4f0b-93e4-d7c9802dac39  File has unexpected size (1279 != 1212). Mirror sync in progress? [IP: 34.216.241.111 443]
+   Hashes of expected file:
+    - SHA512:381168fe720810d1fcd7209cd1e5af232cceb7c878b0b9c651741e0f1ab9f13276acb84a4852372ba1e35eea435b154ea6bbe321bd4cc2d8bd9fb6a7579df7ba
+    - SHA256:72e79089a10e381360bfc6f03c5e5d8c2ff177d6dbac2cd7ffb3cc1383f57591
+    - SHA1:81c541135db1754e53997a93bb0164bfb0c56e95 [weak]
+    - MD5Sum:af59c96cc615e43d008e83a3c08f7680 [weak]
+    - Filesize:1212 [weak]
+E: Failed to fetch https://uswest4.cloudguest.central.arubanetworks.com:443/portal/scope.cust-69dce7749f5f11eea1fb76de43d439f7/Expo/capture?cmd=login&mac=e0%3A2e%3A0b%3Aa0%3A2d%3Ae6&essid=Expo&ip=126.78.134.107&apname=Golden%20State%2012&apmac=50%3Ae4%3Ae0%3Acb%3Ac0%3A67&vcname=TC%20Ballroom%20C-2&switchip=securelogin.hpe.com&url=http%3A%2F%2Farchive.ubuntu.com%2Fubuntu%2Fpool%2Fmain%2Fg%2Fgcc-defaults%2Fgcc_13.2.0-7ubuntu1_amd64.deb&nas-id=2bcc5647-3df1-4f0b-93e4-d7c9802dac39  File has unexpected size (1255 != 5018). Mirror sync in progress? [IP: 34.216.241.111 443]
+   Hashes of expected file:
+    - SHA512:c9c4d8ae24c8f4874fa683cd4d8ce838f535fa93f0fe3c62a4a5756c7f67cda3aa54b2f06fc93f0e16043dbaa492991d4021c399b416484d23fea5adb2331fa8
+    - SHA256:0e0bb8b25153ed1c44ab92bc219eed469fcb5820c5c0bc6454b2fd366a33d3ee
+    - SHA1:b6150fa125f72cb4def0019856f47547f6729477 [weak]
+    - MD5Sum:7799273d32d97051db0f5e19922b1ca1 [weak]
+    - Filesize:5018 [weak]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/g/gcc-13/libstdc%2b%2b-13-dev_13.3.0-6ubuntu2%7e24.04_amd64.deb  File has unexpected size (1289 != 2419924). Mirror sync in progress? [IP: 34.216.241.111 443]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/g/gcc-13/g%2b%2b-13-x86-64-linux-gnu_13.3.0-6ubuntu2%7e24.04_amd64.deb  File has unexpected size (1305 != 12161784). Mirror sync in progress? [IP: 34.216.241.111 443]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/g/gcc-13/g%2b%2b-13_13.3.0-6ubuntu2%7e24.04_amd64.deb  File has unexpected size (1275 != 16050). Mirror sync in progress? [IP: 34.216.241.111 443]
+E: Failed to fetch https://uswest4.cloudguest.central.arubanetworks.com:443/portal/scope.cust-69dce7749f5f11eea1fb76de43d439f7/Expo/capture?cmd=login&mac=e0%3A2e%3A0b%3Aa0%3A2d%3Ae6&essid=Expo&ip=126.78.134.107&apname=Golden%20State%2012&apmac=50%3Ae4%3Ae0%3Acb%3Ac0%3A67&vcname=TC%20Ballroom%20C-2&switchip=securelogin.hpe.com&url=http%3A%2F%2Farchive.ubuntu.com%2Fubuntu%2Fpool%2Fmain%2Fg%2Fgcc-defaults%2Fg%252b%252b-x86-64-linux-gnu_13.2.0-7ubuntu1_amd64.deb&nas-id=2bcc5647-3df1-4f0b-93e4-d7c9802dac39  File has unexpected size (1299 != 964). Mirror sync in progress? [IP: 34.216.241.111 443]
+   Hashes of expected file:
+    - SHA512:fd72413229ee7971eebffb6b35c019c68957c1b4418b71f237fc3d547442c3d58e2c5dced0c251ffc7133d18cdcdcf9848cf64d8bb80fd5d11284adf27fcc751
+    - SHA256:145b027a542db5b21f85d4f9e242f51c62c69914fc484adb3a4881ca8e2f3913
+    - SHA1:be4c451369de3b5daca3c1bfd5848e80ab25f50c [weak]
+    - MD5Sum:3feff3bd101dbaed66782d86fecb82e0 [weak]
+    - Filesize:964 [weak]
+E: Failed to fetch https://uswest4.cloudguest.central.arubanetworks.com:443/portal/scope.cust-69dce7749f5f11eea1fb76de43d439f7/Expo/capture?cmd=login&mac=e0%3A2e%3A0b%3Aa0%3A2d%3Ae6&essid=Expo&ip=126.78.134.107&apname=Golden%20State%2012&apmac=50%3Ae4%3Ae0%3Acb%3Ac0%3A67&vcname=TC%20Ballroom%20C-2&switchip=securelogin.hpe.com&url=http%3A%2F%2Farchive.ubuntu.com%2Fubuntu%2Fpool%2Fmain%2Fg%2Fgcc-defaults%2Fg%252b%252b_13.2.0-7ubuntu1_amd64.deb&nas-id=2bcc5647-3df1-4f0b-93e4-d7c9802dac39  File has unexpected size (1271 != 1100). Mirror sync in progress? [IP: 34.216.241.111 443]
+   Hashes of expected file:
+    - SHA512:5472831c47bd1bd163b72b1dcb253e081c0ecb724ea515548f8da4f0699f11fcf54bf8c33ab1e7f6f8a60d52f574662a9d0d5c945de188d3cde4dd4bab30145b
+    - SHA256:800a84b369c64b18d65f0fb5c1533de0446c880ee4f1cadad64e3363327f63f0
+    - SHA1:5fcf86dcc889a95ea95eec433f7c01f59e946271 [weak]
+    - MD5Sum:4ad944aa44dc1e47976a60d89b854334 [weak]
+    - Filesize:1100 [weak]
+E: Failed to fetch https://uswest4.cloudguest.central.arubanetworks.com:443/portal/scope.cust-69dce7749f5f11eea1fb76de43d439f7/Expo/capture?cmd=login&mac=e0%3A2e%3A0b%3Aa0%3A2d%3Ae6&essid=Expo&ip=126.78.134.107&apname=Golden%20State%2012&apmac=50%3Ae4%3Ae0%3Acb%3Ac0%3A67&vcname=TC%20Ballroom%20C-2&switchip=securelogin.hpe.com&url=http%3A%2F%2Farchive.ubuntu.com%2Fubuntu%2Fpool%2Fmain%2Fm%2Fmake-dfsg%2Fmake_4.3-4.1build2_amd64.deb&nas-id=2bcc5647-3df1-4f0b-93e4-d7c9802dac39  File has unexpected size (1255!= 179752). Mirror sync in progress? [IP: 34.216.241.111 443]
+   Hashes of expected file:
+    - SHA512:3294c784a9900c494e1a9f49188aa12bf1ccf74dda5cf0930495e880fe83c0c68401aaf2ce1d42fd36b13d4af720f97910fe9b43128d3e4d769269412981a58e
+    - SHA256:1fe6a815b56c7b6e9ce4086a363f09444bbd0a0d30e230c453d0b78e44b57a99
+    - SHA1:c9ab7c7949c68820cf113cd3718bfff53edbf628 [weak]
+    - MD5Sum:c7d04f7402e6979c2f3d3f1ebed316f6 [weak]
+    - Filesize:179752 [weak]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/d/dpkg/libdpkg-perl_1.22.6ubuntu6.1_all.deb  File has unexpected size (1255 != 268530). Mirror sync in progress? [IP: 34.216.241.111 443]
+E: Failed to fetch https://uswest4.cloudguest.central.arubanetworks.com:443/portal/scope.cust-69dce7749f5f11eea1fb76de43d439f7/Expo/capture?cmd=login&mac=e0%3A2e%3A0b%3Aa0%3A2d%3Ae6&essid=Expo&ip=126.78.134.107&apname=Golden%20State%2012&apmac=50%3Ae4%3Ae0%3Acb%3Ac0%3A67&vcname=TC%20Ballroom%20C-2&switchip=securelogin.hpe.com&url=http%3A%2F%2Farchive.ubuntu.com%2Fubuntu%2Fpool%2Fmain%2Fb%2Fbzip2%2Fbzip2_1.0.8-5.1build0.1_amd64.deb&nas-id=2bcc5647-3df1-4f0b-93e4-d7c9802dac39  File has unexpected size (1251 != 34534). Mirror sync in progress? [IP: 34.216.241.111 443]
+   Hashes of expected file:
+    - SHA512:8d988415ba29c7f03eb66fe7689334e82ca8e0b4fffed20dd11f03af76e29a1645eb892adae8b2b6dbd580850e9d962344277f4493bb4a540380930aac63a384
+    - SHA256:71c02f8f7541a2a57f0f3545ee826ad9778e665c5c457f34aca9e71abdc1a22b
+    - SHA1:f37757af823e24e1c102a195f47458d2f6e709ac [weak]
+    - MD5Sum:2f7837e0e0695c408747a7d15b99ecb0 [weak]
+    - Filesize:34534 [weak]
+E: Failed to fetch https://uswest4.cloudguest.central.arubanetworks.com:443/portal/scope.cust-69dce7749f5f11eea1fb76de43d439f7/Expo/capture?cmd=login&mac=e0%3A2e%3A0b%3Aa0%3A2d%3Ae6&essid=Expo&ip=126.78.134.107&apname=Golden%20State%2012&apmac=50%3Ae4%3Ae0%3Acb%3Ac0%3A67&vcname=TC%20Ballroom%20C-2&switchip=securelogin.hpe.com&url=http%3A%2F%2Farchive.ubuntu.com%2Fubuntu%2Fpool%2Fmain%2Fl%2Flto-disabled-list%2Flto-disabled-list_47_all.deb&nas-id=2bcc5647-3df1-4f0b-93e4-d7c9802dac39  File has unexpected size (1239 != 12400). Mirror sync in progress? [IP: 34.216.241.111 443]
+   Hashes of expected file:
+    - SHA512:4c75a198a5826827c712a10ddcba84ecc522783e1e215cd4e61ab40a6178fbcd62f711d2b825cdb2500a74b90d89597fbc4ba854c4429e755165729886c8dc48
+    - SHA256:cac0f63c88188f376bb4df10a2af2b49a607bbef97a57db50ed58f678c21eee9
+    - SHA1:e425db866fc1a5f7fbff322d4f2132fa5577afe4 [weak]
+    - MD5Sum:3092b6a4881d38d0ee08ce8766cbcabb [weak]
+    - Filesize:12400 [weak]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/d/dpkg/dpkg-dev_1.22.6ubuntu6.1_all.deb  File has unexpected size (1249 != 1074268). Mirror sync in progress? [IP: 34.216.241.111 443]
+E: Failed to fetch https://uswest4.cloudguest.central.arubanetworks.com:443/portal/scope.cust-69dce7749f5f11eea1fb76de43d439f7/Expo/capture?cmd=login&mac=e0%3A2e%3A0b%3Aa0%3A2d%3Ae6&essid=Expo&ip=126.78.134.107&apname=Golden%20State%2012&apmac=50%3Ae4%3Ae0%3Acb%3Ac0%3A67&vcname=TC%20Ballroom%20C-2&switchip=securelogin.hpe.com&url=http%3A%2F%2Farchive.ubuntu.com%2Fubuntu%2Fpool%2Fmain%2Fb%2Fbuild-essential%2Fbuild-essential_12.10ubuntu1_amd64.deb&nas-id=2bcc5647-3df1-4f0b-93e4-d7c9802dac39  File has unexpected size (1255 != 4928). Mirror sync in progress? [IP: 34.216.241.111 443]
+   Hashes of expected file:
+    - SHA512:42b3ac4560118e11c2d88aea99d40faa7054f38d72086b4dfbc3bb222baf227d7326038e7f652e030ee30bf5cfdd570c7931fc8f19f40b7ce14a29ec340f27c2
+    - SHA256:9b2159b95a4c01937309783c7c8a6ec8dfbcb7ffd604951c9713ac52ee9c7268
+    - SHA1:fb88ce706d33862bcf5602dbd5c8206ff5a6aa27 [weak]
+    - MD5Sum:4d68ffae811efe26d2bbb7dea480f0e7 [weak]
+    - Filesize:4928 [weak]
+E: Failed to fetch https://uswest4.cloudguest.central.arubanetworks.com:443/portal/scope.cust-69dce7749f5f11eea1fb76de43d439f7/Expo/capture?cmd=login&mac=e0%3A2e%3A0b%3Aa0%3A2d%3Ae6&essid=Expo&ip=126.78.134.107&apname=Golden%20State%2012&apmac=50%3Ae4%3Ae0%3Acb%3Ac0%3A67&vcname=TC%20Ballroom%20C-2&switchip=securelogin.hpe.com&url=http%3A%2F%2Farchive.ubuntu.com%2Fubuntu%2Fpool%2Fmain%2Ff%2Ffakeroot%2Flibfakeroot_1.33-1_amd64.deb&nas-id=2bcc5647-3df1-4f0b-93e4-d7c9802dac39  File has unexpected size (1243 != 32374). Mirror sync in progress? [IP: 34.216.241.111 443]
+   Hashes of expected file:
+    - SHA512:10486ff5a768d0588f5241c26caa191dac877a6dccff2c0680d10cc0ee7b38dc7c83de3e3fcfdd701257a6d4f156bab710576787f22ae64661037bb460d2a510
+    - SHA256:a78087f50586595375f850b4445261f7a47a83005b05ce521331929fab49df4b
+    - SHA1:bd9f80f026443682e3ed6def59971ea5b8c50f2e [weak]
+    - MD5Sum:79739dfb64488e1c132252566f19aca8 [weak]
+    - Filesize:32374 [weak]
+E: Failed to fetch https://uswest4.cloudguest.central.arubanetworks.com:443/portal/scope.cust-69dce7749f5f11eea1fb76de43d439f7/Expo/capture?cmd=login&mac=e0%3A2e%3A0b%3Aa0%3A2d%3Ae6&essid=Expo&ip=126.78.134.107&apname=Golden%20State%2012&apmac=50%3Ae4%3Ae0%3Acb%3Ac0%3A67&vcname=TC%20Ballroom%20C-2&switchip=securelogin.hpe.com&url=http%3A%2F%2Farchive.ubuntu.com%2Fubuntu%2Fpool%2Fmain%2Ff%2Ffakeroot%2Ffakeroot_1.33-1_amd64.deb&nas-id=2bcc5647-3df1-4f0b-93e4-d7c9802dac39  File has unexpected size (1235 != 67216). Mirror sync in progress? [IP: 34.216.241.111 443]
+   Hashes of expected file:
+    - SHA512:c1a9bab3fd02851c4eecda29443832d00b881649fa25f3c0458548cccde5e94969f06357d3ca15dc317622a4961daa6bc99df154c25c74e217ad303f564b2041
+    - SHA256:d58b7fc73f0b7ae8b9441b0aa41e44ead0d7e4deedf5aaf5696db182eac71031
+    - SHA1:c0312a38a726959e2b1d50d91217e5ba0d99a4f5 [weak]
+    - MD5Sum:581d4018bf4003027a505efcb419f938 [weak]
+    - Filesize:67216 [weak]
+E: Failed to fetch https://uswest4.cloudguest.central.arubanetworks.com:443/portal/scope.cust-69dce7749f5f11eea1fb76de43d439f7/Expo/capture?cmd=login&mac=e0%3A2e%3A0b%3Aa0%3A2d%3Ae6&essid=Expo&ip=126.78.134.107&apname=Golden%20State%2012&apmac=50%3Ae4%3Ae0%3Acb%3Ac0%3A67&vcname=TC%20Ballroom%20C-2&switchip=securelogin.hpe.com&url=http%3A%2F%2Farchive.ubuntu.com%2Fubuntu%2Fpool%2Fmain%2Fj%2Fjavascript-common%2Fjavascript-common_11%252bnmu1_all.deb&nas-id=2bcc5647-3df1-4f0b-93e4-d7c9802dac39  File has unexpected size (1265 != 5936). Mirror sync in progress? [IP: 34.216.241.111 443]
+   Hashes of expected file:
+    - SHA512:0b0815a502cff95537f19a301cb508645051d3f667de6faf986497f543a0f2f6bd47fbbeccfc26044f698a3e6a947556679f383afcaebdd1a46ad3db4bda272d
+    - SHA256:5e0e49d84d2e6ef1204b0925576305c011d7c70f8d2e2122a1187bced33b36ef
+    - SHA1:41a318812e6daa3a8cf371a7787c5ed7bf06765b [weak]
+    - MD5Sum:37009b714e001758ba3f5505bbb14114 [weak]
+    - Filesize:5936 [weak]
+E: Failed to fetch https://uswest4.cloudguest.central.arubanetworks.com:443/portal/scope.cust-69dce7749f5f11eea1fb76de43d439f7/Expo/capture?cmd=login&mac=e0%3A2e%3A0b%3Aa0%3A2d%3Ae6&essid=Expo&ip=126.78.134.107&apname=Golden%20State%2012&apmac=50%3Ae4%3Ae0%3Acb%3Ac0%3A67&vcname=TC%20Ballroom%20C-2&switchip=securelogin.hpe.com&url=http%3A%2F%2Farchive.ubuntu.com%2Fubuntu%2Fpool%2Fmain%2Fliba%2Flibalgorithm-diff-perl%2Flibalgorithm-diff-perl_1.201-1_all.deb&nas-id=2bcc5647-3df1-4f0b-93e4-d7c9802dac39  Filehas unexpected size (1265 != 41804). Mirror sync in progress? [IP: 34.216.241.111 443]
+   Hashes of expected file:
+    - SHA512:a2a88d7eb873a95c6234c1ff021327e8b62504f9d541f5346ba335b3cd372966af76c38e40eaa7b43fa1a4bd18587e73bb6e7d4632e23c33eea69e5a196c06eb
+    - SHA256:2920d81cf0ac368b2fc52b892bb731ce7ce624a2cf51badbd55f801ba75d076f
+    - SHA1:fc3b77caeb2e06e0c24a07bf70c68b4836d72821 [weak]
+    - MD5Sum:40c9245c939e970765c140f16d609cce [weak]
+    - Filesize:41804 [weak]
+E: Failed to fetch https://uswest4.cloudguest.central.arubanetworks.com:443/portal/scope.cust-69dce7749f5f11eea1fb76de43d439f7/Expo/capture?cmd=login&mac=e0%3A2e%3A0b%3Aa0%3A2d%3Ae6&essid=Expo&ip=126.78.134.107&apname=Golden%20State%2012&apmac=50%3Ae4%3Ae0%3Acb%3Ac0%3A67&vcname=TC%20Ballroom%20C-2&switchip=securelogin.hpe.com&url=http%3A%2F%2Farchive.ubuntu.com%2Fubuntu%2Fpool%2Fmain%2Fliba%2Flibalgorithm-diff-xs-perl%2Flibalgorithm-diff-xs-perl_0.04-8build3_amd64.deb&nas-id=2bcc5647-3df1-4f0b-93e4-d7c9802dac39  File has unexpected size (1289 != 11176). Mirror sync in progress? [IP: 34.216.241.111 443]
+   Hashes of expected file:
+    - SHA512:8e44ab19848fa53d61b42f6b25e8f834677b8daf25527fcaed263abc448ba321468c90347655f3cd865813100791170184502e9d3b8cf5e831091ff80dcad1cd
+    - SHA256:be7d854fbc6bbe48bc1f0bd0bb66cfe27c9dca8b3037aa253394e88300f1d1a6
+    - SHA1:32dad2b8ee90bc137c5ace27fcbd93d30b390510 [weak]
+    - MD5Sum:e11dfb40273bd319c527b0f54a2c51df [weak]
+    - Filesize:11176 [weak]
+E: Failed to fetch https://uswest4.cloudguest.central.arubanetworks.com:443/portal/scope.cust-69dce7749f5f11eea1fb76de43d439f7/Expo/capture?cmd=login&mac=e0%3A2e%3A0b%3Aa0%3A2d%3Ae6&essid=Expo&ip=126.78.134.107&apname=Golden%20State%2012&apmac=50%3Ae4%3Ae0%3Acb%3Ac0%3A67&vcname=TC%20Ballroom%20C-2&switchip=securelogin.hpe.com&url=http%3A%2F%2Farchive.ubuntu.com%2Fubuntu%2Fpool%2Fmain%2Fliba%2Flibalgorithm-merge-perl%2Flibalgorithm-merge-perl_0.08-5_all.deb&nas-id=2bcc5647-3df1-4f0b-93e4-d7c9802dac39  File has unexpected size (1259 != 11382). Mirror sync in progress? [IP: 34.216.241.111 443]
+   Hashes of expected file:
+    - SHA512:a9bba4cca2349a26ef49e46a0d81cbdce2f3e0656ae4e039063ceee54f03dcab24df733c14c0690ab6e02bd698ed41fa0ac31bd9adc938259e2a59e223aab205
+    - SHA256:0ede1dbc3f899353bea903e071dbc86eb94bf90bc0d4fd626dbe6adb12b5db33
+    - SHA1:daef6947fd5496c116456e68d9d633463a6d5c78 [weak]
+    - MD5Sum:8a3beaed0f64ebce668caa459f85f785 [weak]
+    - Filesize:11382 [weak]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/a/aom/libaom3_3.8.2-2ubuntu0.1_amd64.deb  File has unexpected size (1251 != 1941114). Mirror sync in progress? [IP: 34.216.241.111 443]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/libh/libheif/libheif-plugin-aomdec_1.17.6-1ubuntu4.1_amd64.deb  File has unexpected size (1273 != 10412). Mirror sync in progress? [IP: 34.216.241.111 443]
+E: Failed to fetch https://uswest4.cloudguest.central.arubanetworks.com:443/portal/scope.cust-69dce7749f5f11eea1fb76de43d439f7/Expo/capture?cmd=login&mac=e0%3A2e%3A0b%3Aa0%3A2d%3Ae6&essid=Expo&ip=126.78.134.107&apname=Golden%20State%2012&apmac=50%3Ae4%3Ae0%3Acb%3Ac0%3A67&vcname=TC%20Ballroom%20C-2&switchip=securelogin.hpe.com&url=http%3A%2F%2Farchive.ubuntu.com%2Fubuntu%2Fpool%2Fmain%2Flibd%2Flibde265%2Flibde265-0_1.0.15-1build3_amd64.deb&nas-id=2bcc5647-3df1-4f0b-93e4-d7c9802dac39  File has unexpected size (1255 != 166212). Mirror sync in progress? [IP: 34.216.241.111 443]
+   Hashes of expected file:
+    - SHA512:8f4f1e1ed064f891ce29423406c5219d8303e1a5e147d51cdc4050ef93fd24bd115c1185cb873e107bb8fdcc16f6b9022c1957504f517d5dd43b613ffa4a531b
+    - SHA256:3b8cb1fb70933261d076d1b2882fb303aa8da1a951ad7614234f890468c90310
+    - SHA1:bdc190026acac4ac708938cb40e16b32c3bfe569 [weak]
+    - MD5Sum:42eb4971a499185e525e1bc6e4339a9c [weak]
+    - Filesize:166212 [weak]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/libh/libheif/libheif-plugin-libde265_1.17.6-1ubuntu4.1_amd64.deb  File has unexpected size (1275 != 8176).Mirror sync in progress? [IP: 34.216.241.111 443]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/libh/libheif/libheif1_1.17.6-1ubuntu4.1_amd64.deb  File has unexpected size (1255 != 275402). Mirror sync in progress? [IP: 34.216.241.111 443]
+E: Failed to fetch https://uswest4.cloudguest.central.arubanetworks.com:443/portal/scope.cust-69dce7749f5f11eea1fb76de43d439f7/Expo/capture?cmd=login&mac=e0%3A2e%3A0b%3Aa0%3A2d%3Ae6&essid=Expo&ip=126.78.134.107&apname=Golden%20State%2012&apmac=50%3Ae4%3Ae0%3Acb%3Ac0%3A67&vcname=TC%20Ballroom%20C-2&switchip=securelogin.hpe.com&url=http%3A%2F%2Farchive.ubuntu.com%2Fubuntu%2Fpool%2Fmain%2Flibg%2Flibgd2%2Flibgd3_2.3.3-9ubuntu5_amd64.deb&nas-id=2bcc5647-3df1-4f0b-93e4-d7c9802dac39  File has unexpected size (1247 != 127506). Mirror sync in progress? [IP: 34.216.241.111 443]
+   Hashes of expected file:
+    - SHA512:5e22939839074c6c9dd3332f627c6605de3b228b378737151f6d9e7c27c32a13da9db73349f6af0299c77529206decb6b67e3aa2e97193f4287beeb712377804
+    - SHA256:dbef5ad99eec399fd6afeb6d0cc92d81a8b3295a7ac80ac71311ea09c49704ae
+    - SHA1:c0210739b24bbc37850e11b4be0916c8dc0f74d7 [weak]
+    - MD5Sum:104c2096f9b1602ee6e4c9a7dc6a5c20 [weak]
+    - Filesize:127506 [weak]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/g/glibc/libc-devtools_2.39-0ubuntu8.4_amd64.deb  File has unexpected size (1263 != 29342). Mirror sync in progress? [IP: 34.216.241.111 443]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/e/expat/libexpat1-dev_2.6.1-2ubuntu0.2_amd64.deb  File has unexpected size (1257 != 998342). Mirror sync in progress? [IP: 34.216.241.111 443]
+E: Failed to fetch https://uswest4.cloudguest.central.arubanetworks.com:443/portal/scope.cust-69dce7749f5f11eea1fb76de43d439f7/Expo/capture?cmd=login&mac=e0%3A2e%3A0b%3Aa0%3A2d%3Ae6&essid=Expo&ip=126.78.134.107&apname=Golden%20State%2012&apmac=50%3Ae4%3Ae0%3Acb%3Ac0%3A67&vcname=TC%20Ballroom%20C-2&switchip=securelogin.hpe.com&url=http%3A%2F%2Farchive.ubuntu.com%2Fubuntu%2Fpool%2Fmain%2Flibf%2Flibfile-fcntllock-perl%2Flibfile-fcntllock-perl_0.22-4ubuntu5_amd64.deb&nas-id=2bcc5647-3df1-4f0b-93e4-d7c9802dac39  File has unexpected size (1273 != 30666). Mirror sync in progress? [IP: 34.216.241.111 443]
+   Hashes of expected file:
+    - SHA512:6e2104e0dd7ee0b582dda68b8fb20ab2871fbaa3755a3653460109716ada333db64925c4a47d1db7617067d8d8743045e68878958ff26290b88b044dc1099189
+    - SHA256:01a1dddd874ba1aa70e6b6baf7206df0faa4e5dd4bdcbf9f1cd4e8ee1d8548d4
+    - SHA1:670b73301b2621317dc42fb6bbd06fa20fcb2a15 [weak]
+    - MD5Sum:1cec79129d6ec5afa6a73dddcf023df2 [weak]
+    - Filesize:30666 [weak]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/libh/libheif/libheif-plugin-aomenc_1.17.6-1ubuntu4.1_amd64.deb  File has unexpected size (1273 != 14662). Mirror sync in progress? [IP: 34.216.241.111 443]
+E: Failed to fetch https://uswest4.cloudguest.central.arubanetworks.com:443/portal/scope.cust-69dce7749f5f11eea1fb76de43d439f7/Expo/capture?cmd=login&mac=e0%3A2e%3A0b%3Aa0%3A2d%3Ae6&essid=Expo&ip=126.78.134.107&apname=Golden%20State%2012&apmac=50%3Ae4%3Ae0%3Acb%3Ac0%3A67&vcname=TC%20Ballroom%20C-2&switchip=securelogin.hpe.com&url=http%3A%2F%2Farchive.ubuntu.com%2Fubuntu%2Fpool%2Fmain%2Fn%2Fnode-jquery%2Flibjs-jquery_3.6.1%252bdfsg%252b%257e3.5.14-1_all.deb&nas-id=2bcc5647-3df1-4f0b-93e4-d7c9802dac39  File has unexpected size (1295 != 327720). Mirror sync in progress? [IP: 34.216.241.111 443]
+   Hashes of expected file:
+    - SHA512:21c28ec15d9269eef5615ad99d77f09dfeec88ef328a3c2b869300556d46c10a92e7b5a00e83f85cbe4b8eacca4db9e83ad3774a65f4cadff2e9f4670462a0aa
+    - SHA256:8cd2eccd9c73c78c8dfdc5394861c63645f7e114553f29b4d9f15628625d191d
+    - SHA1:d914f7d3b8eb3ec972e31ebb3f25071c2fad5cac [weak]
+    - MD5Sum:8a0fa1eaa400b699f1ab3b01aa4ffd5b [weak]
+    - Filesize:327720 [weak]
+E: Failed to fetch https://uswest4.cloudguest.central.arubanetworks.com:443/portal/scope.cust-69dce7749f5f11eea1fb76de43d439f7/Expo/capture?cmd=login&mac=e0%3A2e%3A0b%3Aa0%3A2d%3Ae6&essid=Expo&ip=126.78.134.107&apname=Golden%20State%2012&apmac=50%3Ae4%3Ae0%3Acb%3Ac0%3A67&vcname=TC%20Ballroom%20C-2&switchip=securelogin.hpe.com&url=http%3A%2F%2Farchive.ubuntu.com%2Fubuntu%2Fpool%2Fmain%2Fu%2Funderscore%2Flibjs-underscore_1.13.4%257edfsg%252b%257e1.11.4-3_all.deb&nas-id=2bcc5647-3df1-4f0b-93e4-d7c9802dac39File has unexpected size (1289 != 117876). Mirror sync in progress? [IP: 34.216.241.111 443]
+   Hashes of expected file:
+    - SHA512:3f54ba5608a781480d1139b00c56d8c46ad63845d0f48267a357126c9f5c98c5cfc78f10e97fe95c40b356f42c861e4a8305d8c1d83a5cd44c88c825fcc6d027
+    - SHA256:d5257b7b4aacb4ebfbe6deda3d672090b85674db457377084e47f12dcc63992b
+    - SHA1:daafd7d6539f6365424ed74510ea79606295f28e [weak]
+    - MD5Sum:fef398fcc563c32ee9cc981fae2e87ca [weak]
+    - Filesize:117876 [weak]
+E: Failed to fetch https://uswest4.cloudguest.central.arubanetworks.com:443/portal/scope.cust-69dce7749f5f11eea1fb76de43d439f7/Expo/capture?cmd=login&mac=e0%3A2e%3A0b%3Aa0%3A2d%3Ae6&essid=Expo&ip=126.78.134.107&apname=Golden%20State%2012&apmac=50%3Ae4%3Ae0%3Acb%3Ac0%3A67&vcname=TC%20Ballroom%20C-2&switchip=securelogin.hpe.com&url=http%3A%2F%2Farchive.ubuntu.com%2Fubuntu%2Fpool%2Fmain%2Fs%2Fsphinx%2Flibjs-sphinxdoc_7.2.6-6_all.deb&nas-id=2bcc5647-3df1-4f0b-93e4-d7c9802dac39  File has unexpected size (1251!= 149488). Mirror sync in progress? [IP: 34.216.241.111 443]
+   Hashes of expected file:
+    - SHA512:a19e7cb2045078eccdea76900ca9beabc5fcd7ed0ccd858cefa7101ffb14889befc46d8a60a76d7c4d54366179ea12fc326f02482170eef77d8c02ac64df68fb
+    - SHA256:3221a4bbc32830cef39def2e20fce04c0af523463444f0bcf27ded153f7c4055
+    - SHA1:8afa1e089b98b3fd5998662e70cf29070ce84894 [weak]
+    - MD5Sum:d7127d4eeb43edad3ba60d3468a821e0 [weak]
+    - Filesize:149488 [weak]
+E: Failed to fetch https://uswest4.cloudguest.central.arubanetworks.com:443/portal/scope.cust-69dce7749f5f11eea1fb76de43d439f7/Expo/capture?cmd=login&mac=e0%3A2e%3A0b%3Aa0%3A2d%3Ae6&essid=Expo&ip=126.78.134.107&apname=Golden%20State%2012&apmac=50%3Ae4%3Ae0%3Acb%3Ac0%3A67&vcname=TC%20Ballroom%20C-2&switchip=securelogin.hpe.com&url=http%3A%2F%2Farchive.ubuntu.com%2Fubuntu%2Fpool%2Fmain%2Fz%2Fzlib%2Fzlib1g-dev_1.3.dfsg-3.1ubuntu2.1_amd64.deb&nas-id=2bcc5647-3df1-4f0b-93e4-d7c9802dac39  File has unexpected size (1267 != 894070). Mirror sync in progress? [IP: 34.216.241.111 443]
+   Hashes of expected file:
+    - SHA512:483cd5aedd87112b64a424ffaabeacd06858b12fdead46c28c3e8bb78c27a7d784c9c8caf50eb7a004aec22070cab0c5f348445b6dbdde48a758bdb10bff4199
+    - SHA256:023cbe9dbf0af87f10e54e342c67571874e412b9950d89c6cd7b010be2e67c3c
+    - SHA1:db99f57bd43c339d817cd1667a14e0bfb7ebe904 [weak]
+    - MD5Sum:846183422bf7d3afb066b27701002404 [weak]
+    - Filesize:894070 [weak]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/p/python3.12/libpython3.12-dev_3.12.3-1ubuntu0.5_amd64.deb  File has unexpected size (1257 != 5675078). Mirror sync in progress? [IP: 34.216.241.111 443]
+E: Failed to fetch https://uswest4.cloudguest.central.arubanetworks.com:443/portal/scope.cust-69dce7749f5f11eea1fb76de43d439f7/Expo/capture?cmd=login&mac=e0%3A2e%3A0b%3Aa0%3A2d%3Ae6&essid=Expo&ip=126.78.134.107&apname=Golden%20State%2012&apmac=50%3Ae4%3Ae0%3Acb%3Ac0%3A67&vcname=TC%20Ballroom%20C-2&switchip=securelogin.hpe.com&url=http%3A%2F%2Farchive.ubuntu.com%2Fubuntu%2Fpool%2Fmain%2Fp%2Fpython3-defaults%2Flibpython3-dev_3.12.3-0ubuntu2_amd64.deb&nas-id=2bcc5647-3df1-4f0b-93e4-d7c9802dac39  File has unexpected size (1265 != 10296). Mirror sync in progress? [IP: 34.216.241.111 443]
+   Hashes of expected file:
+    - SHA512:d1a3c65da6aeb0ff639f01650e0a9b8c1c265cdf60446fea5c93f14dc4ae4666c7594227005ee5ab6a691ce2864c19e99b4e61de27ea7cdd4077eea282d8c128
+    - SHA256:8cc7b722b53955d092f3ff0975efb4f8c9e68157805e0603d1d997ff215b7ae0
+    - SHA1:b30f381d12bfa7eb2ca0718e4c0c3518dee7414d [weak]
+    - MD5Sum:44a9862f85877e0a73367b9a942705d4 [weak]
+    - Filesize:10296 [weak]
+E: Failed to fetch https://uswest4.cloudguest.central.arubanetworks.com:443/portal/scope.cust-69dce7749f5f11eea1fb76de43d439f7/Expo/capture?cmd=login&mac=e0%3A2e%3A0b%3Aa0%3A2d%3Ae6&essid=Expo&ip=126.78.134.107&apname=Golden%20State%2012&apmac=50%3Ae4%3Ae0%3Acb%3Ac0%3A67&vcname=TC%20Ballroom%20C-2&switchip=securelogin.hpe.com&url=http%3A%2F%2Farchive.ubuntu.com%2Fubuntu%2Fpool%2Fmain%2Fm%2Fmanpages%2Fmanpages-dev_6.7-2_all.deb&nas-id=2bcc5647-3df1-4f0b-93e4-d7c9802dac39  File has unexpected size (1241 !=2012606). Mirror sync in progress? [IP: 34.216.241.111 443]
+   Hashes of expected file:
+    - SHA512:b3ffa8f5095419f0b1e771a105389f846211a5a49f06c23b0a4eb37c7ba9bed60119381b0f27091a548187393a31f7c51011c6fdc0c161f2e2ac9e3534970ed4
+    - SHA256:fd5207cf3fdc59e380de1f7becbc74ec4e844d52740eb37ef813691688095496
+    - SHA1:1509fae995363539e1d66b838dccfc94f191ee0c [weak]
+    - MD5Sum:3d7e29eca8138536cc3ae43f3f6a9ef3 [weak]
+    - Filesize:2012606 [weak]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/p/python3.12/python3.12-dev_3.12.3-1ubuntu0.5_amd64.deb  File has unexpected size (1251 != 497932). Mirrorsync in progress? [IP: 34.216.241.111 443]
+E: Failed to fetch https://uswest4.cloudguest.central.arubanetworks.com:443/portal/scope.cust-69dce7749f5f11eea1fb76de43d439f7/Expo/capture?cmd=login&mac=e0%3A2e%3A0b%3Aa0%3A2d%3Ae6&essid=Expo&ip=126.78.134.107&apname=Golden%20State%2012&apmac=50%3Ae4%3Ae0%3Acb%3Ac0%3A67&vcname=TC%20Ballroom%20C-2&switchip=securelogin.hpe.com&url=http%3A%2F%2Farchive.ubuntu.com%2Fubuntu%2Fpool%2Fmain%2Fp%2Fpython3-defaults%2Fpython3-dev_3.12.3-0ubuntu2_amd64.deb&nas-id=2bcc5647-3df1-4f0b-93e4-d7c9802dac39  File has unexpected size (1257 != 26702). Mirror sync in progress? [IP: 34.216.241.111 443]
+   Hashes of expected file:
+    - SHA512:f36ea11d0a459d164578af4b7408e34e55e45d20e2b50f3bb723b535c540b80dfa14921722f671f1890a2fbbc96ec21e40405d4a7e9f1d4d64fe42ffb06e4d3a
+    - SHA256:87815bdf50a17494deb42c27ba56f517601b88f1a668046366a0d542830ac72c
+    - SHA1:17f640c904d9c62d8acba8d415aa0408d31ce3ae [weak]
+    - MD5Sum:5bf5335750ccc7583940189a37e65f04 [weak]
+    - Filesize:26702 [weak]
+E: Failed to fetch https://uswest4.cloudguest.central.arubanetworks.com:443/portal/scope.cust-69dce7749f5f11eea1fb76de43d439f7/Expo/capture?cmd=login&mac=e0%3A2e%3A0b%3Aa0%3A2d%3Ae6&essid=Expo&ip=126.78.134.107&apname=Golden%20State%2012&apmac=50%3Ae4%3Ae0%3Acb%3Ac0%3A67&vcname=TC%20Ballroom%20C-2&switchip=securelogin.hpe.com&url=http%3A%2F%2Farchive.ubuntu.com%2Fubuntu%2Fpool%2Funiverse%2Fw%2Fwheel%2Fpython3-wheel_0.42.0-2_all.deb&nas-id=2bcc5647-3df1-4f0b-93e4-d7c9802dac39  File has unexpected size (1257 != 53052). Mirror sync in progress? [IP: 34.216.241.111 443]
+   Hashes of expected file:
+    - SHA512:450597e8e1559d5bc88a8bb0b62e9c46b36cf8965a1b3980220f3b7136a27d5845df91ab4167c0571f8ca689afce0b6514b1ae66aff22d6cf7a9a9902a6f01cb
+    - SHA256:e1a4076425d3d1f1772b11bff6a025055723b2d0a4972f9519849ddaa8cd3953
+    - SHA1:7991248f3d1ca0717b0071dbc096b30a5bbbb638 [weak]
+    - MD5Sum:e26307ee1d62ce9bdcbbe0d6f1876c00 [weak]
+    - Filesize:53052 [weak]
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/universe/p/python-pip/python3-pip_24.0%2bdfsg-1ubuntu1.1_all.deb  File has unexpected size (1275 != 1316736). Mirror sync in progress? [IP: 34.216.241.111 443]
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ sudo apt install python-htseq
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Note, selecting 'python3-htseq' instead of 'python-htseq'
+python3-htseq is already the newest version (2.0.5-1build1).
+0 upgraded, 0 newly installed, 0 to remove and 137 not upgraded.
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ htseq-count -i gene_id -f bam -t exon -m intersection-nonempty -s no SAMPLE1.sorted.bam genes/chrX.gtf > SAMPLE1.count.txt
+38664 GFF lines processed.
+Warning: Read ERR188273.13655123 claims to have an aligned mate which could not be found in an adjacent line.
+100000 alignment record pairs processed.
+200000 alignment record pairs processed.
+300000 alignment record pairs processed.
+400000 alignment record pairs processed.
+500000 alignment record pairs processed.
+600000 alignment record pairs processed.
+700000 alignment record pairs processed.
+800000 alignment record pairs processed.
+900000 alignment record pairs processed.
+1000000 alignment record pairs processed.
+Warning: 1043716 reads with missing mate encountered.
+1099727 alignment record pairs processed.
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ htseq-count -i gene_id -f bam -t exon -m intersection-nonempty -s no SAMPLE2.sorted.bam genes/chrX.gtf >
+ SAMPLE2.count.txt
+38664 GFF lines processed.
+Warning: Read ERR188428.5247648 claims to have an aligned mate which could not be found in an adjacent line.
+100000 alignment record pairs processed.
+200000 alignment record pairs processed.
+300000 alignment record pairs processed.
+400000 alignment record pairs processed.
+500000 alignment record pairs processed.
+600000 alignment record pairs processed.
+700000 alignment record pairs processed.
+800000 alignment record pairs processed.
+900000 alignment record pairs processed.
+1000000 alignment record pairs processed.
+1100000 alignment record pairs processed.
+1200000 alignment record pairs processed.
+1300000 alignment record pairs processed.
+1400000 alignment record pairs processed.
+1500000 alignment record pairs processed.
+1600000 alignment record pairs processed.
+Warning: 1536770 reads with missing mate encountered.
+1608866 alignment record pairs processed.
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ ls
+SAMPLE1.count.txt       SAMPLE2.count.txt       final.sh  samples
+SAMPLE1.sam             SAMPLE2.sam             genes     summary
+SAMPLE1.sorted.bam      SAMPLE2.sorted.bam      genome
+SAMPLE1.sorted.bam.bai  SAMPLE2.sorted.bam.bai  indexes
+(base) preetikayastha@H107-PN-LT:~/RNAseq_data$ less SAMPLE1.count.txt
+    
