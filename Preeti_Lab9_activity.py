@@ -1,5 +1,5 @@
 """
-hello.py
+activity.py
 Purpose: This program demonstrates the use of a basic print function.
 Author: Preeti
 Date: April 10, 2025
